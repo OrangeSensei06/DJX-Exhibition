@@ -96,11 +96,10 @@ function scheduleChapter() {
 
 function chooseDisplays() {
   const displays = screen.getAllDisplays();
-  const external = displays.filter((display) => display.id !== screen.getPrimaryDisplay().id);
-  const defaults = {
-    book: external.length >= 2 ? external[0].id : screen.getPrimaryDisplay().id,
-    vertical: external.length >= 2 ? external[1].id : external[0]?.id ?? screen.getPrimaryDisplay().id,
-  };
+  // Preview both surfaces on the laptop at startup. Saved operator assignments
+  // still take precedence for an installed two-monitor exhibition.
+  const primaryDisplayId = screen.getPrimaryDisplay().id;
+  const defaults = { book: primaryDisplayId, vertical: primaryDisplayId };
   try {
     const saved = JSON.parse(readFileSync(join(runtimeRoot, 'displays.json'), 'utf8'));
     for (const role of ['book', 'vertical'] as const) {
@@ -122,14 +121,17 @@ function placeWindows() {
     assignments[role] = display.id;
     const area = display.workArea;
     const sharedDisplay = assignments.book === assignments.vertical;
-    const split = Math.round(area.width * 0.62);
+    // Preserve a 16:9 book and 9:16 gallery as large as possible while the
+    // side-by-side window bounds occupy the entire laptop work area.
+    const desiredSplit = Math.round(area.width * (16 / 9) / (16 / 9 + 9 / 16));
+    const split = Math.max(500, Math.min(area.width - 320, desiredSplit));
     const bounds = sharedDisplay
       ? { x: area.x + (role === 'vertical' ? split : 0), y: area.y, width: role === 'book' ? split : area.width - split, height: area.height }
       : { ...area };
     const fullscreen = window.isFullScreen();
     if (fullscreen) window.setFullScreen(false);
     window.setBounds(bounds);
-    if (role === 'vertical' || fullscreen && !sharedDisplay) window.setFullScreen(true);
+    if (fullscreen && !sharedDisplay) window.setFullScreen(true);
   }
 }
 
@@ -142,7 +144,7 @@ function createWindow(role: WindowRole) {
     minHeight: 520,
     show: false,
     frame: role !== 'vertical',
-    fullscreen: role === 'vertical',
+    fullscreen: false,
     backgroundColor: role === 'book' ? '#f7f7f4' : '#171817',
     autoHideMenuBar: true,
     webPreferences: {
@@ -157,7 +159,7 @@ function createWindow(role: WindowRole) {
   window.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
   window.webContents.on('will-navigate', (event) => event.preventDefault());
   window.on('page-title-updated', (event) => event.preventDefault());
-  window.once('ready-to-show', () => { if(role==='vertical')window.setFullScreen(true); window.show(); });
+  window.once('ready-to-show', () => window.show());
   window.webContents.on('did-finish-load', broadcast);
   window.webContents.on('did-start-navigation', (details) => {
     // An embedded chapter loading must not disconnect the parent renderer's IPC.
