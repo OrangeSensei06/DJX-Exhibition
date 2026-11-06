@@ -10,8 +10,8 @@ permissions:
   contents: read
 
 jobs:
-  windows-build:
-    runs-on: windows-latest
+  linux-build:
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
@@ -24,15 +24,15 @@ jobs:
       - name: Run automated tests and produce Windows-ready renderer and Electron bundles
         run: npm run check
       - name: Verify launch bundles
-        shell: pwsh
+        shell: bash
         run: |
-          if (!(Test-Path dist/index.html)) { throw "Missing dist/index.html" }
-          if (!(Test-Path dist-electron/electron/main.js)) { throw "Missing Electron entry" }
-          if (!(Test-Path dist/assets)) { throw "Missing Vite assets" }
+          test -f dist/index.html
+          test -f dist-electron/electron/main.js
+          test -d dist/assets
       - name: Publish verified build outputs
         uses: actions/upload-artifact@v4
         with:
-          name: djx-exhibition-windows-build
+          name: djx-exhibition-verified-build
           path: |
             dist/
             dist-electron/
