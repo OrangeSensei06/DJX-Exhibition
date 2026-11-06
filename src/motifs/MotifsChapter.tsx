@@ -1,0 +1,16 @@
+import {useEffect,useRef,useState} from 'react';
+import type {Snapshot,WindowRole} from '../../shared/protocol';
+import './motifs.css';
+type State=Snapshot['motifs'];
+const send=(action:'start'|'lift'|'open'|'bloom'|'next'|'reset'|'exit')=>void window.exhibition?.motifsAction(action);
+export function MotifsChapter({role,state}:{role:WindowRole;state:State}){
+ const host=useRef<HTMLElement>(null),frame=useRef<HTMLIFrameElement>(null);
+ const [scale,setScale]=useState(0);
+ useEffect(()=>{const observer=new ResizeObserver(([e])=>setScale(Math.min(e.contentRect.width/1080,e.contentRect.height/1920)));observer.observe(host.current!);return()=>observer.disconnect()},[]);
+ useEffect(()=>{if(role!=='vertical')return;const handler=(e:MessageEvent)=>{if(e.source!==frame.current?.contentWindow||e.origin!==location.origin||e.data?.type!=='motifs-status')return;void window.exhibition?.motifsAction('status',e.data.phase,e.data.blooms)};window.addEventListener('message',handler);return()=>window.removeEventListener('message',handler)},[role]);
+ useEffect(()=>{if(role==='vertical'&&state.command)frame.current?.contentWindow?.postMessage({type:'motifs-command',action:state.command},'*')},[role,state.commandId,state.command]);
+ return <section ref={host} className="motifs-chapter" data-motifs-phase={state.phase}>
+ {role==='vertical'&&state.phase!=='WAIT'?<iframe key={state.generation} ref={frame} className="motifs-animation" title="Chapter 04 · Patterns of Paradise" src="./motifs/index.html" style={{transform:`translate(-50%,-50%) scale(${scale})`}}/>:role==='book'?<article className="motifs-book"><span>MUGHAL TIMES · CHAPTER 04</span><h1>Patterns of Paradise</h1><p>Decoding the Mughal Aesthetic</p><div className="motifs-book-rule"/><p>The garden unfolds in the gallery.</p><small>Use Setup to open the scroll, bloom flowers, or replay.</small></article>:null}
+ </section>;
+}
+export function MotifsControls({state}:{state:State}){const bloomReady=['SCROLL_READY','CONTENT_VISIBLE','BLOOM_OPTIONAL'].includes(state.phase);return <section className="setup-section"><h3>Chapter 04 · Patterns of Paradise</h3><div className="fashion-controls"><button className="control-button" disabled={!state.active||state.phase!=='WAIT'} onClick={()=>send('lift')}>Swipe up / bring to gallery</button><button className="control-button" onClick={()=>send('start')}>Start Chapter 4</button><button className="control-button" disabled={!state.active||state.phase!=='SCROLL_READY'} onClick={()=>send('open')}>Open the scroll</button><button className="control-button" disabled={!state.active||!bloomReady||state.blooms>=3} onClick={()=>send('bloom')}>{state.blooms>=3?'Garden in bloom':`Bloom flowers · ${state.blooms}/3`}</button><button className="control-button" disabled={!state.active||!bloomReady} onClick={()=>send('next')}>Next chapter · clear garden</button><button className="control-button" disabled={!state.active} onClick={()=>send('reset')}>Replay Chapter 4</button><button className="control-button" disabled={!state.active} onClick={()=>send('exit')}>Exit Chapter 4</button></div><p className="setup-note" role="status">{state.phase==='ERROR'?'The chapter could not load. Replay to retry.':`Stage: ${state.phase} · Bloom ${state.blooms}/3`}</p></section>}

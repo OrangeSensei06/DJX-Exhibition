@@ -1,0 +1,149 @@
+{
+  "asset": "RoyalBiryani",
+  "version": 1,
+  "file": "royal_biryani.glb",
+  "units": "metres",
+  "upAxis": "Y",
+  "sourceUpAxis": "Z",
+  "groups": [
+    {
+      "name": "Vessel",
+      "label": "Copper handi",
+      "restPosition": [
+        0,
+        0,
+        0
+      ],
+      "explodeOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Rice",
+      "label": "Saffron basmati",
+      "restPosition": [
+        0,
+        0,
+        0
+      ],
+      "explodeOffset": [
+        0,
+        0.105,
+        0
+      ]
+    },
+    {
+      "name": "Chicken",
+      "label": "Roasted chicken",
+      "restPosition": [
+        0,
+        0,
+        0
+      ],
+      "explodeOffset": [
+        0,
+        0.225,
+        0
+      ]
+    },
+    {
+      "name": "Onions",
+      "label": "Fried onions",
+      "restPosition": [
+        0,
+        0,
+        0
+      ],
+      "explodeOffset": [
+        0,
+        0.33,
+        0
+      ]
+    },
+    {
+      "name": "Herbs",
+      "label": "Mint and coriander",
+      "restPosition": [
+        0,
+        0,
+        0
+      ],
+      "explodeOffset": [
+        0,
+        0.59,
+        0
+      ]
+    },
+    {
+      "name": "Nuts",
+      "label": "Toasted cashews",
+      "restPosition": [
+        0,
+        0,
+        0
+      ],
+      "explodeOffset": [
+        0,
+        0.5,
+        0
+      ]
+    },
+    {
+      "name": "WholeSpices",
+      "label": "Whole spices",
+      "restPosition": [
+        0,
+        0,
+        0
+      ],
+      "explodeOffset": [
+        0,
+        0.425,
+        0
+      ]
+    },
+    {
+      "name": "Saffron",
+      "label": "Saffron threads",
+      "restPosition": [
+        0,
+        0,
+        0
+      ],
+      "explodeOffset": [
+        0,
+        0.675,
+        0
+      ]
+    }
+  ],
+  "triangles": 398128,
+  "meshCount": 8,
+  "animation": {
+    "name": "Scene",
+    "durationSeconds": 3,
+    "assembledTime": 0,
+    "explodedTime": 3
+  },
+  "steam": {
+    "wispFiles": [
+      "/textures/steam/steam_wisp_1.png",
+      "/textures/steam/steam_wisp_2.png",
+      "/textures/steam/steam_wisp_3.png"
+    ],
+    "flipbook": "/textures/steam/steam_flipbook_4x4.png",
+    "columns": 4,
+    "rows": 4,
+    "frames": 16,
+    "frameOrder": "top-left, row-major",
+    "suggestedFPS": 8,
+    "alpha": "straight",
+    "colorSpace": "sRGB",
+    "blend": "normal transparent",
+    "depthWrite": false,
+    "anchor": "bottom centre",
+    "suggestedWorldHeight": 0.18
+  }
+}

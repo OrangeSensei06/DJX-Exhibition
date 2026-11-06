@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="300" height="14" viewBox="0 0 300 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Divider">
+<g id="Group">
+<path id="Vector" d="M0 7H120" stroke="#E5B95B" stroke-opacity="0.7"/>
+<path id="Vector_2" d="M180 7H300" stroke="#E5B95B" stroke-opacity="0.7"/>
+</g>
+<path id="Vector_3" d="M155.657 7L150 1.34315L144.343 7L150 12.6569L155.657 7Z" fill="#E5B95B"/>
+<path id="Vector_4" d="M132 8.6C132.884 8.6 133.6 7.88366 133.6 7C133.6 6.11634 132.884 5.4 132 5.4C131.116 5.4 130.4 6.11634 130.4 7C130.4 7.88366 131.116 8.6 132 8.6Z" fill="#E5B95B"/>
+<path id="Vector_5" d="M168 8.6C168.884 8.6 169.6 7.88366 169.6 7C169.6 6.11634 168.884 5.4 168 5.4C167.116 5.4 166.4 6.11634 166.4 7C166.4 7.88366 167.116 8.6 168 8.6Z" fill="#E5B95B"/>
+</g>
+</svg>

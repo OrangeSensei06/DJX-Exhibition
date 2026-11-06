@@ -1,0 +1,15 @@
+{
+  "model": "Mughal_Times_Biryani.glb",
+  "unit": "local scene Y-axis units",
+  "appliesTo": "named layer group nodes under Biryani",
+  "offsets": {
+    "bowl": 0.0,
+    "rice": 0.9,
+    "saffron": 1.5,
+    "protein": 2.1,
+    "onions": 2.7,
+    "herbs": 3.3,
+    "spices": 3.9
+  },
+  "source": "mughal-times.html, variable `off` near original `order`"
+}

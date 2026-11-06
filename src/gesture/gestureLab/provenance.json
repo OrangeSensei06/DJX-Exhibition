@@ -1,0 +1,25 @@
+{
+  "source": "Z:\\Projects\\Kanha\\gesture-lab",
+  "runtimeVersion": "0.10.35",
+  "importedAt": "2026-11-04",
+  "adaptations": [
+    "HandTracker uses the gesture-lab-vision npm alias",
+    "HandTracker assets are namespaced under vision/gesture-lab"
+  ],
+  "files": {
+    "public/vision/gesture-lab/models/hand_landmarker.task": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+    "public/vision/gesture-lab/wasm/vision_wasm_internal.js": "e7fd9858e8e8f221d9b96eddc11f8e077f263e0b7bbd79d3cbe882b134274f8c",
+    "public/vision/gesture-lab/wasm/vision_wasm_internal.wasm": "6a5c64584c2ab61c763b6e204afbdbc7ce1caf7f5216187322bca8df94f646bc",
+    "public/vision/gesture-lab/wasm/vision_wasm_module_internal.js": "1f1d6215324a1fe62f6742d49a3db911170987ca18ad8c1b75f1a1c82acf2b44",
+    "public/vision/gesture-lab/wasm/vision_wasm_module_internal.wasm": "617b8e0248dbd27e9d7ece4218004eae4cefb499196d1bb4fa0e3fef21708756",
+    "public/vision/gesture-lab/wasm/vision_wasm_nosimd_internal.js": "438d1fe8ff7f4d946025bc211c291543c037d8a3785ed4eee60f1f521b236296",
+    "public/vision/gesture-lab/wasm/vision_wasm_nosimd_internal.wasm": "8a3092d34c79d3f57e6ba8592105e8a90f6b07c27891ffecd14cca428bfd3e31",
+    "src/gesture/gestureLab/draw.js": "39a2bb1b85d6969a31ec2119164f39e68750e64db68757f1acc1d2a0eb433646",
+    "src/gesture/gestureLab/gestures/config.js": "8d9a0630ff3561c97af289ba19c3a9f319568bda91b2f1907c8ecb1251100945",
+    "src/gesture/gestureLab/gestures/engine.js": "51ebcfd0541f3f8f200ed37a19789c499f86c85626e22ee6221b94a4cbe6bbe9",
+    "src/gesture/gestureLab/gestures/features.js": "23fe487ef916201f70155bb453c4508f518f4f6da5049bafed01865d04df0b20",
+    "src/gesture/gestureLab/vision/audioOnset.js": "12774ddbc05850f1a3040f9137fa857d473e780c70f4ae8e806e360ae11bb7c4",
+    "src/gesture/gestureLab/vision/handTracker.js": "c7642a0b3fadb2ea0173d94a8ce5a08a624a33ad1696cf02049f7ca83a97f69d",
+    "src/gesture/gestureLab/vision/tracker.js": "3c2da20828ed6ce6302d06378863aa4ecedf1e765e147f40c7e2ac7fa9b9d519"
+  }
+}

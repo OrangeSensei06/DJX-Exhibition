@@ -1,0 +1,224 @@
+const imgImage34 = "https://www.figma.com/api/mcp/asset/1f89e845-8f02-4d4f-b38c-780095d42300.png";
+const imgDressRemovebgPreview1 = "https://www.figma.com/api/mcp/asset/3ff7fd05-2255-437c-ac53-3e54429773a3.png";
+const imgFinal = "https://www.figma.com/api/mcp/asset/9050a144-3ce2-4d0c-8a3b-a677a0df5196.svg";
+const imgRuleTitle = "https://www.figma.com/api/mcp/asset/dab081fb-0721-4bed-97dd-cbe94855f268.svg";
+const imgImageFrame = "https://www.figma.com/api/mcp/asset/525b6339-8674-4649-943d-ef2d709059c9.svg";
+const imgRuleIntro = "https://www.figma.com/api/mcp/asset/7a640a55-33bc-4e88-9502-a840f34d499e.svg";
+const imgSpine = "https://www.figma.com/api/mcp/asset/d5b0c96a-6c61-46a0-810a-d715707c507a.svg";
+const imgAnarkaliMotif = "https://www.figma.com/api/mcp/asset/7227d4e0-689e-44b6-90da-3e74bf469591.svg";
+const imgQutubMinar = "https://www.figma.com/api/mcp/asset/b531610e-a119-447d-9bcd-abfe4f840563.svg";
+
+export default function Final() {
+  return (
+    <div className="bg-[#242f3c] relative size-full" data-node-id="126:2197" data-name="FINAL">
+      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFinal} />
+      <div className="absolute contents inset-[3.42%_40.05%_1.42%_2.6%]" data-node-id="126:2201" data-name="Left-Page">
+        <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[4.63%_86.46%_91.79%_2.6%] leading-[normal] text-[#e7d3b0] text-[32px] whitespace-nowrap" data-node-id="126:2202">
+          CHAPTER 02
+        </p>
+        <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[11.5%_73.75%_81.08%_3.13%] leading-[normal] text-[#f3e6c8] text-[66px] uppercase whitespace-nowrap" data-node-id="126:2203">{`Threads of `}</p>
+        <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[15.67%_60.36%_71.33%_2.92%] leading-[normal] text-[116px] text-white uppercase whitespace-nowrap" data-node-id="126:2204">
+          Tradition
+        </p>
+        <p className="[word-break:break-word] absolute font-['Playfair_Display:Regular'] font-normal inset-[63.25%_53.8%_24.75%_29.9%] leading-[normal] text-[#ffc33e] text-[36px]" data-node-id="126:2205">
+          From Mughal courts to modern wardrobes.
+        </p>
+        <div className="absolute inset-[30.67%_53.54%_69.33%_3.13%]" data-node-id="126:2206" data-name="rule-title">
+          <div className="absolute inset-[-0.75px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgRuleTitle} />
+          </div>
+        </div>
+        <div className="-translate-y-1/2 absolute aspect-[437/745] left-[4.79%] right-[73.23%] top-[calc(50%+163.5px)]" data-node-id="126:2207" data-name="image 34">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[101.93%] left-0 max-w-none top-[-1.91%] w-full" src={imgImage34} />
+          </div>
+        </div>
+        <div className="absolute inset-[32.67%_71.98%_5.5%_3.49%]" data-node-id="126:2208" data-name="image-frame">
+          <div className="absolute inset-[-0.13%_-0.21%]">
+            <img alt="" className="block max-w-none size-full" src={imgImageFrame} />
+          </div>
+        </div>
+        <div className="absolute inset-[94.08%_53.33%_5.92%_29.9%]" data-node-id="126:2209" data-name="rule-intro">
+          <div className="absolute inset-[-1px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgRuleIntro} />
+          </div>
+        </div>
+        <p className="[word-break:break-word] absolute font-['Poppins:Bold'] inset-[96.92%_96.04%_1.42%_3.13%] leading-[normal] not-italic text-[#d9bb78] text-[13px] whitespace-nowrap" data-node-id="126:2210">
+          02
+        </p>
+        <p className="[word-break:break-word] absolute font-['Poppins:Bold'] inset-[3.42%_40.05%_94.92%_52.81%] leading-[normal] not-italic text-[#d9bb78] text-[13px] text-right whitespace-nowrap" data-node-id="126:2211">
+          INDIA THROUGH TIME
+        </p>
+      </div>
+      <div className="absolute inset-[0_48.18%]" data-node-id="126:2212" data-name="Spine">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSpine} />
+      </div>
+      <div className="absolute flex inset-[-0.33%_-5%_-26.83%_81.56%] items-center justify-center" data-node-id="126:2213" style={{ containerType: "size" }}>
+        <div className="-rotate-90 flex-none h-[100cqw] w-[100cqh]">
+          <p className="[word-break:break-word] font-['Poppins:Bold'] leading-[normal] not-italic relative text-[300px] text-[rgba(255,255,255,0.18)] whitespace-nowrap">ANARKALI</p>
+        </div>
+      </div>
+      <div className="absolute contents inset-[8.5%_11.3%_57.5%_51.82%]" data-node-id="126:2216" data-name="anarkali-pattern">
+        <div className="absolute inset-[8.5%_45.68%_85.5%_51.82%] opacity-20" data-node-id="126:2217" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[8.5%_41.09%_85.5%_56.41%] opacity-20" data-node-id="126:2220" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[8.5%_36.51%_85.5%_60.99%] opacity-20" data-node-id="126:2223" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[8.5%_31.93%_85.5%_65.57%] opacity-20" data-node-id="126:2226" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[8.5%_27.34%_85.5%_70.16%] opacity-20" data-node-id="126:2229" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[8.5%_22.76%_85.5%_74.74%] opacity-20" data-node-id="126:2232" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[8.5%_18.18%_85.5%_79.32%] opacity-20" data-node-id="126:2235" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[8.5%_13.59%_85.5%_83.91%] opacity-20" data-node-id="126:2238" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[15.5%_43.39%_78.5%_54.11%] opacity-20" data-node-id="126:2241" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[15.5%_38.8%_78.5%_58.7%] opacity-20" data-node-id="126:2244" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[15.5%_34.22%_78.5%_63.28%] opacity-20" data-node-id="126:2247" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[15.5%_29.64%_78.5%_67.86%] opacity-20" data-node-id="126:2250" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[15.5%_25.05%_78.5%_72.45%] opacity-20" data-node-id="126:2253" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[15.5%_20.47%_78.5%_77.03%] opacity-20" data-node-id="126:2256" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[15.5%_15.89%_78.5%_81.61%] opacity-20" data-node-id="126:2259" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[15.5%_11.3%_78.5%_86.2%] opacity-20" data-node-id="126:2262" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[22.5%_45.68%_71.5%_51.82%] opacity-20" data-node-id="126:2265" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[22.5%_41.09%_71.5%_56.41%] opacity-20" data-node-id="126:2268" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[22.5%_36.51%_71.5%_60.99%] opacity-20" data-node-id="126:2271" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[22.5%_31.93%_71.5%_65.57%] opacity-20" data-node-id="126:2274" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[22.5%_27.34%_71.5%_70.16%] opacity-20" data-node-id="126:2277" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[22.5%_22.76%_71.5%_74.74%] opacity-20" data-node-id="126:2280" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[22.5%_18.18%_71.5%_79.32%] opacity-20" data-node-id="126:2283" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[22.5%_13.59%_71.5%_83.91%] opacity-20" data-node-id="126:2286" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[29.5%_43.39%_64.5%_54.11%] opacity-20" data-node-id="126:2289" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[29.5%_38.8%_64.5%_58.7%] opacity-20" data-node-id="126:2292" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[29.5%_34.22%_64.5%_63.28%] opacity-20" data-node-id="126:2295" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[29.5%_29.64%_64.5%_67.86%] opacity-20" data-node-id="126:2298" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[29.5%_25.05%_64.5%_72.45%] opacity-20" data-node-id="126:2301" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[29.5%_20.47%_64.5%_77.03%] opacity-20" data-node-id="126:2304" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[29.5%_15.89%_64.5%_81.61%] opacity-20" data-node-id="126:2307" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[29.5%_11.3%_64.5%_86.2%] opacity-20" data-node-id="126:2310" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[36.5%_45.68%_57.5%_51.82%] opacity-20" data-node-id="126:2313" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[36.5%_41.09%_57.5%_56.41%] opacity-20" data-node-id="126:2316" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[36.5%_36.51%_57.5%_60.99%] opacity-20" data-node-id="126:2319" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[36.5%_31.93%_57.5%_65.57%] opacity-20" data-node-id="126:2322" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[36.5%_27.34%_57.5%_70.16%] opacity-20" data-node-id="126:2325" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[36.5%_22.76%_57.5%_74.74%] opacity-20" data-node-id="126:2328" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[36.5%_18.18%_57.5%_79.32%] opacity-20" data-node-id="126:2331" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+        <div className="absolute inset-[36.5%_13.59%_57.5%_83.91%] opacity-20" data-node-id="126:2334" data-name="anarkali-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAnarkaliMotif} />
+        </div>
+      </div>
+      <div className="[word-break:break-word] absolute contents inset-[62.67%_25.52%_5.27%_53.7%] leading-[normal] not-italic whitespace-nowrap" data-node-id="126:2337">
+        <div className="absolute contents font-['Poppins:Bold'] inset-[62.67%_27.92%_10.17%_53.7%] text-[66px]" data-node-id="126:3124">
+          <p className="absolute inset-[62.67%_33.85%_29.08%_53.7%] text-[#f3e6c8]" data-node-id="126:2338">{`A royal `}</p>
+          <p className="absolute inset-[75.25%_27.92%_16.5%_53.7%] text-[#f3e6c8]" data-node-id="126:2339">
+            with a rich
+          </p>
+          <p className="absolute inset-[81.58%_30.21%_10.17%_53.7%] text-[#6ba2e3]" data-node-id="126:2340">
+            heritage.
+          </p>
+        </div>
+        <p className="absolute font-['Poppins:Regular'] inset-[89.82%_25.83%_7.77%_53.7%] text-[#e9e4d8] text-[19px]" data-node-id="126:2341">
+          From the royal courts to your wardrobe —
+        </p>
+        <p className="absolute font-['Poppins:Regular'] inset-[92.32%_25.52%_5.27%_53.7%] text-[#e9e4d8] text-[19px]" data-node-id="126:2342">
+          the Anarkali has flowed through centuries.
+        </p>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Poppins:Bold'] inset-[68.75%_27.5%_23%_53.7%] leading-[normal] not-italic text-[#f3e6c8] text-[66px] whitespace-nowrap" data-node-id="126:3125">
+        silhouette,
+      </p>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[84.42%_59.64%_8.42%_30%] leading-[normal] text-[#e7d3b0] text-[32px]" data-node-id="126:2343">
+        Maldevta Anarkali
+      </p>
+      <div className="absolute inset-[23.33%_51.79%_40.5%_29.53%]" data-node-id="126:2344" data-name="qutub-minar">
+        <div className="absolute inset-[-0.18%_-0.17%]">
+          <img alt="" className="block max-w-none size-full" src={imgQutubMinar} />
+        </div>
+      </div>
+      <div className="absolute h-[700px] left-[1312px] top-[302px] w-[525px]" data-node-id="126:2387" data-name="DRESS-removebg-preview 1">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDressRemovebgPreview1} />
+      </div>
+      <div className="[word-break:break-word] absolute contents font-['Cinzel:Bold'] font-bold inset-[10.58%_5.42%_72.17%_54.37%] leading-[100px] text-[104px] whitespace-nowrap" data-node-id="126:3129">
+        <p className="absolute inset-[10.58%_5.42%_81.08%_54.37%] text-[#f3e6c8]" data-node-id="126:2214">
+          DRESSED LIKE
+        </p>
+        <p className="absolute inset-[19.5%_15.78%_72.17%_54.37%] text-[#ff6038]" data-node-id="126:2215">
+          ROYALTY ?
+        </p>
+      </div>
+    </div>
+  );
+}

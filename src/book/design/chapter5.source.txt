@@ -1,0 +1,277 @@
+const imgImage6 = "https://www.figma.com/api/mcp/asset/eb795380-09f4-441e-95ac-e345d13cfdf1.png";
+const imgWhatsAppImage20261103At124426PmRemovebgPreview1 = "https://www.figma.com/api/mcp/asset/a5b039b5-f7a1-4723-a012-46066ebeb9d7.png";
+const imgFinal = "https://www.figma.com/api/mcp/asset/554e6fcf-3cc5-4f78-9403-8e567e8b2113.svg";
+const imgRuleTitle = "https://www.figma.com/api/mcp/asset/7c13cec5-c12b-4434-9dab-292d0f4e96bd.svg";
+const imgImageFrame = "https://www.figma.com/api/mcp/asset/175cd77b-c791-47bc-b1ac-e4f386ba6117.svg";
+const imgRuleIntro = "https://www.figma.com/api/mcp/asset/9be61438-73dc-4cbc-901c-471038b3b819.svg";
+const imgSpine = "https://www.figma.com/api/mcp/asset/58f3b5f6-477f-4328-a6f9-df3d51e5e5f4.svg";
+const imgGroup = "https://www.figma.com/api/mcp/asset/8a396cea-a09e-49f4-b9dc-4fe38b83f09e.svg";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/c45ef732-53c5-4c90-b89c-56e1ab47012e.svg";
+const imgGroup2 = "https://www.figma.com/api/mcp/asset/57befcd5-7a21-4bb6-b77e-d6ce2925bf7d.svg";
+const imgGroup3 = "https://www.figma.com/api/mcp/asset/373aa9df-e3e5-46a4-b6b9-9df221be1d9c.svg";
+const imgGroup4 = "https://www.figma.com/api/mcp/asset/a58b1936-f1e8-4ea8-9f2b-38172d603fe7.svg";
+const imgGroup5 = "https://www.figma.com/api/mcp/asset/2994245f-ccd4-4b42-8f19-81fe68f403f5.svg";
+const imgGroup6 = "https://www.figma.com/api/mcp/asset/412bd09d-3ffa-4ec5-bc35-7fd60660ba61.svg";
+const imgGroup7 = "https://www.figma.com/api/mcp/asset/06d300e2-0e7f-41c2-a119-ad73285bea33.svg";
+const imgJhumkaLineArt = "https://www.figma.com/api/mcp/asset/cb57e056-3372-4891-b165-0c78006243ca.svg";
+
+export default function Final() {
+  return (
+    <div className="bg-[#242f3c] relative size-full" data-node-id="126:2803" data-name="FINAL">
+      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFinal} />
+      <div className="absolute contents inset-[2.08%_39.84%_2.75%_2.81%]" data-node-id="126:2807" data-name="Left-Page">
+        <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[3.29%_86.25%_93.13%_2.81%] leading-[normal] text-[#e7d3b0] text-[32px] whitespace-nowrap" data-node-id="126:2808">
+          CHAPTER 02
+        </p>
+        <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[8.5%_72.86%_84.08%_3.33%] leading-[normal] text-[#f3e6c8] text-[66px] uppercase whitespace-nowrap" data-node-id="126:2809">{`Beyond the `}</p>
+        <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[12.67%_58.91%_74.33%_3.13%] leading-[normal] text-[116px] text-white uppercase whitespace-nowrap" data-node-id="126:2810">
+          Ornament
+        </p>
+        <p className="[word-break:break-word] absolute font-['Playfair_Display:Regular'] font-normal inset-[24.67%_78.8%_71.75%_3.33%] leading-[normal] text-[#d9bb78] text-[32px] whitespace-nowrap" data-node-id="126:2811">{`Jewels of the Empire `}</p>
+        <div className="absolute inset-[29.33%_53.33%_70.67%_3.33%]" data-node-id="126:2812" data-name="rule-title">
+          <div className="absolute inset-[-0.75px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgRuleTitle} />
+          </div>
+        </div>
+        <div className="-translate-y-1/2 absolute aspect-[467/736] left-[3.7%] right-[71.77%] top-[calc(50%+147px)]" data-node-id="126:2813" data-name="image 6">
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage6} />
+        </div>
+        <div className="absolute inset-[31.33%_71.77%_6.83%_3.7%]" data-node-id="126:2814" data-name="image-frame">
+          <div className="absolute inset-[-0.13%_-0.21%]">
+            <img alt="" className="block max-w-none size-full" src={imgImageFrame} />
+          </div>
+        </div>
+        <div className="absolute flex inset-[93.75%_58.8%_6.08%_30.21%] items-center justify-center" data-node-id="126:2815" style={{ containerType: "size" }}>
+          <div className="flex-none h-[hypot(-0.00449206cqw,49.9978cqh)] rotate-[0.54deg] w-[hypot(100cqw,100cqh)]">
+            <div className="relative size-full" data-name="rule-intro">
+              <div className="absolute inset-[-1px_0]">
+                <img alt="" className="block max-w-none size-full" src={imgRuleIntro} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p className="[word-break:break-word] absolute font-['Poppins:Bold'] inset-[95.58%_95.78%_2.75%_3.33%] leading-[normal] not-italic text-[#d9bb78] text-[13px] whitespace-nowrap" data-node-id="126:2816">
+          05
+        </p>
+        <p className="[word-break:break-word] absolute font-['Poppins:Bold'] inset-[2.08%_39.84%_96.25%_53.02%] leading-[normal] not-italic text-[#d9bb78] text-[13px] text-right whitespace-nowrap" data-node-id="126:2817">
+          INDIA THROUGH TIME
+        </p>
+      </div>
+      <div className="absolute inset-[0_48.18%]" data-node-id="126:2818" data-name="Spine">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSpine} />
+      </div>
+      <div className="absolute flex inset-[-9%_-6.25%_-29.25%_82.81%] items-center justify-center" data-node-id="126:2819" style={{ containerType: "size" }}>
+        <div className="-rotate-90 flex-none h-[100cqw] w-[100cqh]">
+          <p className="[word-break:break-word] font-['Poppins:Bold'] leading-[normal] not-italic relative text-[300px] text-[rgba(255,255,255,0.18)] whitespace-nowrap">JEWELLERY</p>
+        </div>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[12%_21.93%_76.33%_54.37%] leading-[normal] text-[#f3e6c8] text-[104px] whitespace-nowrap" data-node-id="126:2820">
+        DRAPED
+      </p>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[20.67%_16.61%_67.67%_54.37%] leading-[normal] text-[#f3e6c8] text-[104px] whitespace-nowrap" data-node-id="126:2821">
+        IN GOLD ?
+      </p>
+      <div className="absolute contents inset-[6.17%_20.52%_51.76%_53.7%]" data-node-id="126:2822" data-name="jhumka-pattern-left">
+        <div className="absolute inset-[6.17%_43.21%_86.41%_53.7%] opacity-18 overflow-clip" data-node-id="126:2823" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2824" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[6.17%_37.54%_86.41%_59.37%] opacity-18 overflow-clip" data-node-id="126:2833" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2834" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[6.17%_31.86%_86.41%_65.04%] opacity-18 overflow-clip" data-node-id="126:2843" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2844" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[6.17%_26.19%_86.41%_70.71%] opacity-18 overflow-clip" data-node-id="126:2853" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2854" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[6.17%_20.52%_86.41%_76.39%] opacity-18 overflow-clip" data-node-id="126:2863" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2864" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[14.83%_40.37%_77.75%_56.53%] opacity-18 overflow-clip" data-node-id="126:2873" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2874" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup2} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[14.83%_34.7%_77.75%_62.21%] opacity-18 overflow-clip" data-node-id="126:2883" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2884" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup2} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[14.83%_29.03%_77.75%_67.88%] opacity-18 overflow-clip" data-node-id="126:2893" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2894" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup3} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[14.83%_23.36%_77.75%_73.55%] opacity-18 overflow-clip" data-node-id="126:2903" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2904" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup3} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[23.49%_43.21%_69.08%_53.7%] opacity-18 overflow-clip" data-node-id="126:2913" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2914" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup4} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[23.49%_37.54%_69.08%_59.37%] opacity-18 overflow-clip" data-node-id="126:2923" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2924" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup4} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[23.49%_31.86%_69.08%_65.04%] opacity-18 overflow-clip" data-node-id="126:2933" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2934" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup4} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[23.49%_26.19%_69.08%_70.71%] opacity-18 overflow-clip" data-node-id="126:2943" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2944" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup5} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[23.49%_20.52%_69.08%_76.39%] opacity-18 overflow-clip" data-node-id="126:2953" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2954" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup5} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[32.15%_40.37%_60.42%_56.53%] opacity-18 overflow-clip" data-node-id="126:2963" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2964" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup6} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[32.15%_34.7%_60.42%_62.21%] opacity-18 overflow-clip" data-node-id="126:2973" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2974" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup6} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[32.15%_29.03%_60.42%_67.88%] opacity-18 overflow-clip" data-node-id="126:2983" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2984" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup7} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[32.15%_23.36%_60.42%_73.55%] opacity-18 overflow-clip" data-node-id="126:2993" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:2994" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup7} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[40.82%_43.21%_51.76%_53.7%] opacity-18 overflow-clip" data-node-id="126:3003" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:3004" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup6} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[40.82%_37.54%_51.76%_59.37%] opacity-18 overflow-clip" data-node-id="126:3013" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:3014" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup6} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[40.82%_31.86%_51.76%_65.04%] opacity-18 overflow-clip" data-node-id="126:3023" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:3024" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup6} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[40.82%_26.19%_51.76%_70.71%] opacity-18 overflow-clip" data-node-id="126:3033" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:3034" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup7} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[40.82%_20.52%_51.76%_76.39%] opacity-18 overflow-clip" data-node-id="126:3043" data-name="jhumka-motif">
+          <div className="absolute inset-[5%_7.31%_8.89%_7.31%]" data-node-id="126:3044" data-name="Group">
+            <div className="absolute inset-[-1.04%_-1.57%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup7} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="[word-break:break-word] absolute contents font-['Poppins:Regular'] inset-[89.82%_30.89%_6.85%_53.7%] leading-[normal] not-italic text-[#e9e4d8] text-[13.2px] whitespace-nowrap" data-node-id="126:3053">
+        <p className="absolute inset-[89.82%_32.29%_8.52%_53.7%]" data-node-id="126:3057">
+          From royal courts to your jewellery box —
+        </p>
+        <p className="absolute inset-[91.48%_30.89%_6.85%_53.7%]" data-node-id="126:3058">
+          Mughal craft has sparkled through centuries.
+        </p>
+      </div>
+      <div className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[85.08%_60.68%_7.75%_30.47%] leading-[0] text-[#e7d3b0] text-[32px] whitespace-nowrap" data-node-id="126:3059">
+        <p className="leading-[normal] mb-0">Maldevta</p>
+        <p className="leading-[normal]">Jhumka</p>
+      </div>
+      <div className="absolute inset-[47.25%_59.9%_18.15%_30.52%]" data-node-id="126:3060" data-name="jhumka-line-art">
+        <div className="absolute inset-[-0.19%_-0.38%]">
+          <img alt="" className="block max-w-none size-full" src={imgJhumkaLineArt} />
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute flex items-center justify-center left-[calc(50%+586px)] size-[600.581px] top-[331.71px]" data-node-id="126:3115">
+        <div className="flex-none rotate-[168.96deg]">
+          <div className="relative size-[512px]" data-name="WhatsApp_Image_2026-11-03_at_12.44.26_PM-removebg-preview 1">
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhatsAppImage20261103At124426PmRemovebgPreview1} />
+          </div>
+        </div>
+      </div>
+      <div className="[word-break:break-word] absolute contents font-['Poppins:Bold'] inset-[68.92%_23.59%_10.17%_53.7%] leading-[normal] not-italic text-[66px] whitespace-nowrap" data-node-id="126:3159">
+        <p className="absolute inset-[68.92%_23.59%_22.83%_53.7%] text-[#eadba8]" data-node-id="126:3160">
+          A royal glow,
+        </p>
+        <p className="absolute inset-[75.25%_27.92%_16.5%_53.7%] text-[#eadba8]" data-node-id="126:3161">
+          with a rich
+        </p>
+        <p className="absolute inset-[81.58%_33.23%_10.17%_53.7%] text-[#efba43]" data-node-id="126:3162">
+          legacy.
+        </p>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Playfair_Display:Regular'] font-normal inset-[31.33%_51.82%_56.67%_30.21%] leading-[normal] text-[#ffc33e] text-[36px]" data-node-id="126:3168">
+        From opulent palaces to exquisite adornments
+      </p>
+    </div>
+  );
+}

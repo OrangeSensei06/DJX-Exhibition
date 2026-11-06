@@ -1,0 +1,152 @@
+
+.fashion-book{position:absolute;inset:12px 3% 30px;display:flex;filter:drop-shadow(0 12px 20px #0001)}
+.fashion-page{position:relative;width:50%;height:100%;overflow:hidden;background:#fbf0e6}
+.magazine-background{width:100%;height:100%;object-fit:fill;display:block}
+.magazine-model{position:absolute;object-fit:contain;object-position:bottom;bottom:1%;height:83%;pointer-events:none}
+.white-model{right:1%;width:79%}.red-model{left:0;width:83%}
+.fashion-spine{position:absolute;left:50%;top:0;bottom:0;width:22px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,#251a1725,#fff8,transparent)}
+.fashion-book-hint{position:absolute;bottom:2%;left:25%;right:25%;text-align:center;font:10px Arial;letter-spacing:1px;background:#fff9;padding:8px;color:#713c31}
+.figures-leaving .magazine-model{animation:figure-lift 1100ms cubic-bezier(.4,0,.2,1) both;animation-delay:var(--lift-delay)}
+@keyframes figure-lift{0%{transform:translateY(0) scale(1);opacity:1}35%{opacity:.95}100%{transform:translateY(-110%) scale(.78);opacity:0}}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;src:url('./../../public/fashion/dress/cormorant.ttf') format('truetype');font-display:swap}
+@font-face{font-family:Jost;font-weight:400;src:url('./../../public/fashion/dress/jost.ttf') format('truetype');font-display:swap}
+@font-face{font-family:Manrope;font-weight:500;src:url('./../../public/fashion/dress/manrope-medium.ttf') format('truetype');font-display:swap}
+@font-face{font-family:Manrope;font-weight:600;src:url('./../../public/fashion/dress/manrope-semibold.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'Playfair Display SC';font-weight:400;src:url('./../../public/fashion/dress/playfair.ttf') format('truetype');font-display:swap}
+.fashion-gallery{position:absolute;inset:10px 28px 28px;overflow:hidden;background:#121f2b;color:#fff;isolation:isolate}
+.fashion-wait{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:#121f2b;color:#f6ead2}
+.fashion-wait h1{font:72px/1 'Cormorant Garamond',Georgia;margin:28px 0;letter-spacing:-1px}.fashion-wait span{font:9px Manrope,Arial;letter-spacing:2px}.fashion-wait p{font:16px Jost,Arial}.fashion-wait small{font:10px Manrope,Arial;margin-top:40px}
+.dress-viewport{position:absolute;inset:0;overflow:hidden}
+.dress-canvas{position:absolute;left:50%;top:50%;width:1080px;height:1920px;transform-origin:center;overflow:hidden;background:#121f2b;isolation:isolate}
+.dress-canvas p{margin:0}.dress-canvas img{display:block;max-width:none;pointer-events:none}
+.dress-jaali{position:absolute;left:0;top:0;opacity:1}
+.dress-heading{position:absolute;inset:0;z-index:2}
+.dress-brand{position:absolute;top:55px;left:454px;font:600 14px/normal Manrope,sans-serif;letter-spacing:6.3px;white-space:nowrap;color:#e5b95b}
+.dress-top-rule{position:absolute;left:156px;top:104px;width:767px;height:1px;background:#e5b95559}
+.dress-chapter{position:absolute;top:167px;width:1080px;text-align:center;font:600 17px/normal Manrope,sans-serif;letter-spacing:6.46px;color:#e5b95b}
+/* Title h1 — always positioned absolutely inside the heading container */
+.dress-title-text{position:absolute;top:229px;left:90px;width:900px;margin:0;text-align:center;font:300 104px/.92 'Cormorant Garamond',serif;letter-spacing:-1.04px;color:#f6ead2}
+.dress-divider{position:absolute}.dress-title-divider{left:390px;top:455px}
+.dress-subtitle{position:absolute;top:499px;left:127px;width:826px;font:400 32px/1.5 'Playfair Display SC',serif;text-align:center;color:#e8d8b8d9}
+.dress-intro{position:absolute;top:624px;left:59px;width:476px;font:400 35px/normal Jost,sans-serif;z-index:2}
+.dress-textile{position:absolute;left:576px;top:609px;width:435px;height:430.33px;object-fit:cover}
+.dress-pavilion{position:absolute;left:10px;top:930px;width:251px;height:436px;overflow:hidden;z-index:1}
+.dress-pavilion img{position:absolute;left:0;top:-23.8%;width:196.07%;height:123.8%}
+/* ── FIGURE — identical container for both Anarkali (red) and Chikankari (white) ── */
+.dress-figure{position:absolute;left:104px;top:1075px;width:719px;height:784px}
+.dress-figure-crop{position:absolute;inset:0;overflow:hidden}.dress-figure-crop img{position:absolute;left:-2.36%;top:-97.83%;width:130.88%;height:213.27%}
+.dress-figure-mask{position:absolute;left:493px;top:0;width:226px;height:506px;border-bottom-left-radius:1746px;background:#121f2b}
+.dress-step{position:absolute;left:0;bottom:0;background:#0e1b26;border-top-right-radius:19px}.step-one{width:113px;height:51px}.step-two{width:61px;height:98px}.step-three{width:31px;height:139px}
+/* White/Chikankari look — same absolute position & size as the red Anarkali figure */
+.dress-white-look{position:absolute;left:104px;top:1075px;width:719px;height:784px;opacity:0;visibility:hidden}
+.dress-white-crop{position:absolute;inset:0;overflow:hidden;border-top-right-radius:378px}
+.dress-white-crop img{position:absolute;left:-2.36%;top:-97.83%;width:130.88%;height:213.27%}
+.dress-white-mask{position:absolute;background:#0d1c29}
+.white-mask-right{left:493px;top:0;width:226px;height:506px;border-bottom-left-radius:1746px}
+.white-mask-top{left:505px;top:0;width:214px;height:260px}
+.white-mask-step-one{left:0;bottom:0;width:113px;height:51px;top:auto}
+.white-mask-step-two{left:0;bottom:0;width:61px;height:98px;top:auto}
+.white-mask-step-three{left:0;bottom:0;width:31px;height:139px;top:auto;border-radius:29px}
+/* Textile — same size for white look as Anarkali */
+.look-white .dress-textile{left:576px;top:609px;width:435px;height:430.33px;object-fit:cover}
+.look-white .dress-description{top:1122px}
+.dress-description{position:absolute;left:598px;top:1122px;width:482px;z-index:2}.dress-description p{font:400 32px/normal Jost,sans-serif}.dress-copy-divider{left:45px;top:-47px}
+.dress-particle{position:absolute;z-index:3}
+.dress-corner{position:absolute;width:330px;height:302.37px;overflow:hidden;border-bottom-left-radius:197px;z-index:4}
+.dress-corner img{position:absolute;left:-148.6%;top:0;width:246.05%;height:100%}
+.dress-corner-tr{left:767px;top:0}.dress-corner-tl{left:-11px;top:0;transform:scaleX(-1)}.dress-corner-br{left:771px;top:1617px;transform:scaleY(-1)}.dress-corner-bl{left:-12px;top:1617px;transform:rotate(180deg)}
+.dress-footer{position:absolute;left:0;top:1862px;width:1080px;font:500 12px/normal Manrope,sans-serif;letter-spacing:6px;text-align:center;color:#e8d8b880;z-index:5}
+
+/* ── INTRO ANIMATION SEQUENCE ─────────────────────────────────────────────────
+   1) temple (pavilion) slides in from left + textile slides in from right
+   2) model comes up with fade in
+   3) text / header appears
+   ──────────────────────────────────────────────────────────────────────────── */
+.entrance{animation:dress-in 700ms ease both;animation-delay:var(--elapsed)}
+/* Step 1 */
+.dress-pavilion{animation-name:dress-slide-left;animation-duration:800ms;animation-timing-function:cubic-bezier(.25,.46,.45,.94);animation-delay:var(--elapsed)}
+.dress-textile{animation-name:dress-slide-right;animation-duration:800ms;animation-timing-function:cubic-bezier(.25,.46,.45,.94);animation-delay:var(--elapsed)}
+/* Step 2 */
+.dress-figure,.dress-white-look{animation-name:dress-rise-fade;animation-duration:1100ms;animation-timing-function:cubic-bezier(.22,.61,.36,1);animation-delay:var(--elapsed)}
+/* Step 3 */
+.dress-heading{animation-delay:calc(var(--elapsed) + 2400ms)}
+.dress-intro{animation-delay:calc(var(--elapsed) + 2500ms)}
+.dress-description{animation-delay:calc(var(--elapsed) + 2500ms)}
+.dress-footer{animation-delay:calc(var(--elapsed) + 2700ms)}
+
+
+@property --dress-radius { syntax: '<length>'; inherits: false; initial-value: 0px; }
+.dress-art-stage,.dress-art-layer{position:absolute;inset:0;pointer-events:none}
+.art-incoming{animation:dress-wipe 850ms linear both;mask-image:radial-gradient(circle at 0 100%,#000 calc(var(--dress-radius) - 1px),transparent var(--dress-radius))}
+.art-outgoing{animation:dress-wipe 850ms linear both;mask-image:radial-gradient(circle at 0 100%,transparent calc(var(--dress-radius) - 1px),#000 var(--dress-radius))}
+.art-incoming .entrance,.art-outgoing .entrance{animation:none}
+.art-contact{animation:dress-wipe 850ms linear both;mask-image:radial-gradient(circle at 0 100%,transparent calc(var(--dress-radius) - 38px),#0008 calc(var(--dress-radius) - 15px),#000 var(--dress-radius),transparent calc(var(--dress-radius) + 12px));filter:sepia(.6) saturate(1.2) brightness(1.65);mix-blend-mode:screen;opacity:.48;pointer-events:none}
+.art-contact .entrance{animation:none}
+/* A softer trailing band catches embroidered details just behind the reveal edge. */
+.art-incoming{mask-image:radial-gradient(circle at 0 100%,#000 calc(var(--dress-radius) - 5px),transparent calc(var(--dress-radius) + 4px))}
+@media(prefers-reduced-motion:reduce){.art-contact{display:none}}
+@keyframes dress-wipe{from{--dress-radius:0px}to{--dress-radius:2250px}}
+.dress-copy-motion{--text-x:600px;animation:copy-arrive 450ms ease-out both}
+.copy-left{--text-x:-600px}
+.copy-leaving{animation:copy-depart 280ms ease-in both}
+@keyframes copy-arrive{from{opacity:0;translate:var(--text-x) 0}to{opacity:1;translate:0 0}}
+@keyframes copy-depart{from{opacity:1;translate:0 0}to{opacity:0;translate:var(--text-x) 0}}
+.fashion-exiting .dress-copy-motion{animation:copy-depart 400ms ease-in both;animation-delay:var(--exit-delay)}
+.fashion-exiting .entrance{animation:dress-out 600ms ease both;animation-delay:var(--exit-delay)}
+.fashion-exiting .dress-figure,.fashion-exiting .dress-white-look{animation-delay:calc(var(--exit-delay) + 100ms)}.fashion-exiting .dress-pavilion{animation-delay:calc(var(--exit-delay) + 350ms)}.fashion-exiting .dress-textile{animation-delay:calc(var(--exit-delay) + 550ms)}.fashion-exiting .dress-corner{animation-delay:calc(var(--exit-delay) + 1100ms)}.fashion-exiting .dress-jaali{animation-delay:calc(var(--exit-delay) + 1400ms)}
+.fashion-book.fashion-exiting .magazine-model{animation:figure-return 900ms ease both;animation-delay:calc(var(--exit-delay) + 1200ms)}
+.fashion-controls{display:grid;gap:10px}
+
+/* ── KEYFRAMES ────────────────────────────────────────────────────────────── */
+@keyframes dress-in{from{opacity:0}to{opacity:1}}
+@keyframes dress-slide-right{from{opacity:0;translate:90px 0}to{opacity:1;translate:0 0}}
+@keyframes dress-slide-left{from{opacity:0;translate:-70px 0}to{opacity:1;translate:0 0}}
+@keyframes dress-rise-fade{from{opacity:0;translate:0 80px}to{opacity:1;translate:0 0}}
+/* kept for backward compat */
+@keyframes dress-slide{from{opacity:0;translate:80px 0}to{opacity:1;translate:0 0}}
+@keyframes dress-rise{from{opacity:0;translate:0 70px}to{opacity:1;translate:0 0}}
+@keyframes dress-out{from{opacity:1;translate:0 0}to{opacity:0;translate:0 35px}}
+@keyframes figure-return{from{transform:translateY(-110%) scale(.78);opacity:0}to{transform:none;opacity:1}}
+/* Text switch */
+@keyframes text-slide-out-left{from{opacity:1;translate:0 0}to{opacity:0;translate:-80px 0}}
+@keyframes text-slide-out-right{from{opacity:1;translate:0 0}to{opacity:0;translate:80px 0}}
+@keyframes text-slide-in-left{from{opacity:0;translate:-80px 0}to{opacity:1;translate:0 0}}
+@keyframes text-slide-in-right{from{opacity:0;translate:80px 0}to{opacity:1;translate:0 0}}
+/* Switch mask sweeps from right corner */
+@keyframes switch-mask-expand{
+  0%{width:0;height:0}
+  50%{width:1600px;height:1600px;opacity:1}
+  100%{width:1600px;height:1600px;opacity:0}
+}
+@keyframes switch-corner-pulse{
+  0%{opacity:1;transform:scale(1)}
+  50%{opacity:.8;transform:scale(1.2)}
+  100%{opacity:0;transform:scale(1)}
+}
+@media(prefers-reduced-motion:reduce){.entrance,.dress-switch-text,.figures-leaving .magazine-model,.fashion-book.fashion-exiting .magazine-model{animation-duration:1ms;animation-delay:0ms}}
+
+.fashion-exiting .dress-figure,.fashion-exiting .dress-white-look{animation-delay:var(--exit-delay)}
+.fashion-exiting .dress-pavilion{animation-name:dress-slide-left;animation-direction:reverse;animation-delay:var(--exit-delay)}
+.fashion-exiting .dress-textile{animation-name:dress-slide-right;animation-direction:reverse;animation-delay:var(--exit-delay)}
+@media(prefers-reduced-motion:reduce){.dress-copy-motion,.art-incoming,.art-outgoing{animation-duration:1ms;animation-delay:0ms}}
+
+.fashion-gallery:not(.fashion-exiting) .has-switched .dress-art-layer .entrance{animation:none}
+.dress-intro.entrance,.dress-description.entrance{animation:none}
+.dress-copy-motion{animation-delay:calc(var(--elapsed) + 2500ms)}
+.has-switched .dress-copy-motion{animation-delay:0ms}
+.fashion-exiting .dress-intro.entrance,.fashion-exiting .dress-description.entrance{animation:none}
+.fashion-exiting .dress-copy-motion{animation-delay:var(--exit-delay)}
+
+.vertical .dress-heading .dress-title-text{font:300 104px/.92 'Cormorant Garamond',serif;letter-spacing:-1.04px;margin:0;width:900px}
+.dress-white-crop img{left:-2.02%;top:-85.31%;width:126.99%;height:197.99%}
+.white-mask-right{left:567.6px;top:53px;width:151.4px;height:486px;border-radius:21px}
+.white-mask-top{left:498px;top:39px;width:221px;height:229px;border-radius:21px}
+.dress-white-crop.dress-portrait{border-radius:0}
+.dress-white-crop.dress-portrait img{left:0;top:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 3px 9px #0005)}
+.dress-atmosphere{position:absolute;inset:0;pointer-events:none;z-index:3;overflow:hidden;box-shadow:inset 0 0 140px #020b1760;background:radial-gradient(ellipse at 45% 75%,#efc36c18,transparent 60%)}
+.dress-atmosphere i{position:absolute;width:3px;height:3px;border-radius:50%;background:#ffe2a0;box-shadow:0 0 8px 2px #f6cc7755;animation:dress-dust 12s linear infinite}
+@keyframes dress-dust{0%{translate:0 80px;opacity:0}20%,75%{opacity:.55}100%{translate:25px -130px;opacity:0}}
+.fashion-exiting .dress-atmosphere{animation:dress-out 600ms both}
+@media(prefers-reduced-motion:reduce){.dress-atmosphere i{animation:none;opacity:.3}}
+
+.vertical .dress-chapter{top:118px}.vertical .dress-title-text{top:180px}.vertical .dress-title-divider{top:406px}.vertical .dress-subtitle{top:450px}

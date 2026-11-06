@@ -1,0 +1,45 @@
+
+:root{--bg:#2a2517;--gold:#d9b779;--ink:#f4ead6;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0;background:var(--bg);overflow:hidden;font-family:'Jost',system-ui,sans-serif;color:var(--ink)}
+#root,#app{position:fixed;inset:0;background:radial-gradient(120% 80% at 50% 70%,#4a3f26 0%,#2a2517 60%,#1b170d 100%)}
+canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(90% 70% at 50% 55%,transparent 55%,rgba(0,0,0,.55))}
+#flash{position:absolute;inset:0;pointer-events:none;opacity:0;background:radial-gradient(circle at 50% 55%,#fff4d6,#f0b45f 55%,#7a4a1c)}
+.ui{position:absolute;inset:0;pointer-events:none;display:flex;flex-direction:column;align-items:center;text-align:center;padding:calc(env(safe-area-inset-top,0px) + 4.5vh) 24px 0}
+.ui>*{transition:opacity 1.2s ease,transform 1.2s ease;opacity:0;transform:translateY(8px)}
+.brand{font-size:10px;letter-spacing:.42em;color:var(--gold)}
+.chap{font-size:9px;letter-spacing:.34em;color:#b99d6b;margin-top:2.2vh;text-transform:uppercase}
+h1{font:400 clamp(34px,7vh,58px)/1.05 'Cormorant Garamond',serif;margin:1.4vh 0 0;letter-spacing:.01em}
+.rule{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.8vh 0}
+.sub{font:italic 400 15px/1.5 'Cormorant Garamond',serif;color:#cdbf9f;max-width:300px}
+.body{font-size:12.5px;font-weight:300;line-height:1.75;max-width:330px;margin-top:2vh;color:#eadfc6}
+.show{opacity:1!important;transform:none!important}
+.btn{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 3.2vh);translate:-50% 0;pointer-events:auto;cursor:pointer;border:1px solid rgba(217,183,121,.6);background:rgba(30,24,12,.55);backdrop-filter:blur(8px);color:var(--ink);font:400 11px 'Jost',sans-serif;letter-spacing:.3em;text-transform:uppercase;padding:14px 26px;border-radius:40px;transition:opacity 1s,background .3s;opacity:0}
+.btn.show{animation:pulse 2.4s ease-in-out infinite}
+.btn:hover{background:rgba(217,183,121,.25)}
+.btn.off{pointer-events:none}
+@keyframes pulse{50%{box-shadow:0 0 22px rgba(240,180,95,.55)}}
+
+@font-face{font-family:'Cormorant Garamond';src:url('../fashion/dress/cormorant.ttf');font-weight:300 500}
+@font-face{font-family:Jost;src:url('../fashion/dress/jost.ttf');font-weight:300 400}
+@font-face{font-family:Manrope;src:url('../fashion/dress/manrope-semibold.ttf');font-weight:600}
+:root{--bg:#392f19}
+#app{background:#392f19 url('./figma/vertical-imgVector.svg') left top/115.56% 105% no-repeat}
+.ui{display:block;padding:0}
+.ui .brand{position:absolute;top:2.865%;left:0;width:100%;font:600 .7292vh Manrope;letter-spacing:.45em}
+.ui .chap{position:absolute;top:8.698%;left:0;width:100%;margin:0;font:600 .8854vh Manrope;letter-spacing:.38em;color:#e5b95b}
+.ui h1{position:absolute;top:11.927%;left:8.333%;width:83.334%;margin:0;font:300 5.4167vh/.92 'Cormorant Garamond';letter-spacing:-.01em}
+.ui .rule{position:absolute;top:19.48%;left:36.11%;width:27.78%;height:.73%;margin:0;background:url('./figma/vertical-imgDivider.svg') center/contain no-repeat}
+.ui .sub{position:absolute;top:21.77%;left:17.59%;width:64.82%;max-width:none;font:400 1.354vh/1.5 Jost;font-style:normal}
+.ui .body{position:absolute;top:29.27%;left:3%;width:94%;max-width:none;margin:0;text-align:left;font:400 1.667vh/1.45 Jost;color:white}
+.ui .body{transition:opacity .35s ease,transform .35s ease;transition-delay:0s!important}
+.ui .body.show{transition-delay:.15s!important}
+.arch-corner{position:absolute;width:30.56%;height:15.75%;overflow:hidden;border-bottom-left-radius:18.24vw;pointer-events:none;z-index:3}
+.arch-corner img{position:absolute;left:-148.6%;width:246.05%;height:100%}
+.tl{left:-1.02%;top:0;transform:scaleX(-1)}.tr{left:71.02%;top:0}.bl{left:-1.11%;top:84.22%;transform:rotate(180deg)}.br{left:71.39%;top:84.22%;transform:scaleY(-1)}
+.btn{z-index:4;bottom:1%;padding:8px 16px;font-size:9px;background:#211b10dc}
+.departing .ui>*,.departing .btn{opacity:0!important;transition-delay:0s!important;pointer-events:none}
+.departing .arch-corner{transition:opacity .6s;opacity:0}
+
+.arch-corner,.btn{display:none!important}.ui h1{top:10.469%}.ui .rule{top:16.927%}.ui .sub{top:18.021%;left:6.667%;width:86.666%}.ui .body{top:29.27%}

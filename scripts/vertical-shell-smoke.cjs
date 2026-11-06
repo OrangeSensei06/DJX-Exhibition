@@ -1,0 +1,9 @@
+const {app,BrowserWindow}=require('electron'),assert=require('node:assert/strict'),fs=require('node:fs');
+require('../dist-electron/electron/main.js');
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+async function until(fn){for(let i=0;i<160;i++){if(await fn())return;await wait(100)}throw Error('Vertical shell timed out')}
+(async()=>{await app.whenReady();await wait(1800);const ws=BrowserWindow.getAllWindows(),b=ws.find(w=>w.getTitle().endsWith('Book')),v=ws.find(w=>w.getTitle().endsWith('Vertical'));const read=c=>v.webContents.executeJavaScript(c),open=n=>b.webContents.executeJavaScript(`window.exhibition.bookOpen(${n})`);fs.mkdirSync('output/vertical',{recursive:true});const shot=async n=>fs.writeFileSync(`output/vertical/${n}.png`,(await v.webContents.capturePage()).toPNG());
+await open(2);await wait(1400);assert(await read("!!document.querySelector('.universal-idle')"));assert.equal(await read("document.querySelectorAll('.universal-corners img').length"),4);await shot('idle');
+await open(5);await wait(450);assert(await read("!!document.querySelector('.spark-front')"));await shot('colour-reveal');
+await until(()=>read("window.exhibition.getSnapshot().then(s=>s.jewels.phase==='READY')"));assert(await read("!!document.querySelector('.universal-doodle')"));assert.equal(await read("getComputedStyle(document.querySelector('iframe').contentDocument.querySelector('.corner')).display"),'none');await shot('interaction-prompt');
+await b.webContents.executeJavaScript("window.exhibition.jewelsAction('reverse')");await until(()=>read("window.exhibition.getSnapshot().then(s=>s.jewels.phase==='COMPLETE')"));assert(await read("!!document.querySelector('.universal-idle')"));assert.equal(await read("document.querySelectorAll('.universal-corners img').length"),4);await shot('complete');console.log('PASS: universal idle, colour reveal, spark edge, shared corners and completion prompts');app.exit(0)})().catch(e=>{console.error(e);app.exit(1)});

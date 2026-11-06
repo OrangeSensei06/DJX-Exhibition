@@ -1,0 +1,114 @@
+{
+  "bytes": 1436284,
+  "triangles": 54812,
+  "vertices": 31973,
+  "meshes": 10,
+  "primitives": 10,
+  "materials": 10,
+  "images": 0,
+  "nodes": [
+    {
+      "name": "world",
+      "children": [
+        1
+      ]
+    },
+    {
+      "name": "Biryani",
+      "children": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "bowl",
+      "children": [
+        9,
+        10
+      ]
+    },
+    {
+      "name": "rice",
+      "children": [
+        11
+      ]
+    },
+    {
+      "name": "saffron",
+      "children": [
+        12
+      ]
+    },
+    {
+      "name": "protein",
+      "children": [
+        13,
+        14
+      ]
+    },
+    {
+      "name": "onions",
+      "children": [
+        15
+      ]
+    },
+    {
+      "name": "herbs",
+      "children": [
+        16
+      ]
+    },
+    {
+      "name": "spices",
+      "children": [
+        17,
+        18
+      ]
+    },
+    {
+      "name": "Copper_Bowl",
+      "children": []
+    },
+    {
+      "name": "Gold_Rim",
+      "children": []
+    },
+    {
+      "name": "Basmati_Rice_1500",
+      "children": []
+    },
+    {
+      "name": "Saffron_Rice_520",
+      "children": []
+    },
+    {
+      "name": "Meat_Pieces_11",
+      "children": []
+    },
+    {
+      "name": "Vegetable_Pieces_6",
+      "children": []
+    },
+    {
+      "name": "Fried_Onion_Pieces_90",
+      "children": []
+    },
+    {
+      "name": "Mint_Coriander_55",
+      "children": []
+    },
+    {
+      "name": "Whole_Spices_16",
+      "children": []
+    },
+    {
+      "name": "Cashews_16",
+      "children": []
+    }
+  ]
+}

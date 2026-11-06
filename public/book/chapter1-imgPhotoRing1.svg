@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="609.04" height="609.04" viewBox="0 0 609.04 609.04" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="photo-ring" filter="url(#filter0_f_0_48)">
+<path d="M304.52 534.04C431.281 534.04 534.04 431.281 534.04 304.52C534.04 177.76 431.281 75 304.52 75C177.76 75 75 177.76 75 304.52C75 431.281 177.76 534.04 304.52 534.04Z" fill="#350000"/>
+</g>
+<defs>
+<filter id="filter0_f_0_48" x="0" y="0" width="609.04" height="609.04" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="37.5" result="effect1_foregroundBlur_0_48"/>
+</filter>
+</defs>
+</svg>

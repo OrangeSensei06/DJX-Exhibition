@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Biryani · Asset Studio</title>
+  </head>
+  <body>
+    <main id="studio">
+      <header><span class="eyebrow">MUGHAL TIMES / ASSET STUDIO</span><h1>Royal biryani.</h1><p>One dish. Every ingredient.</p></header>
+      <canvas id="view" aria-label="Interactive 3D biryani. Drag to orbit and scroll to zoom."></canvas>
+      <aside>
+        <p class="eyebrow">01 / INGREDIENTS</p>
+        <div id="ingredients"></div>
+        <div class="divider"></div>
+        <label for="separation">Separate the dish <output id="amount">0%</output></label>
+        <input id="separation" type="range" min="0" max="1" value="0" step="0.001" />
+        <div class="buttons"><button id="assemble">Assemble</button><button id="explode">Explode</button></div>
+        <label class="toggle"><input id="steam" type="checkbox" checked /> Gentle steam</label>
+        <label class="toggle"><input id="rotate" type="checkbox" /> Turntable</label>
+        <button id="reset" class="quiet">Reset view</button>
+        <p id="status" role="status">Loading local GLB…</p>
+      </aside>
+      <footer><span>DRAG TO ORBIT · SCROLL TO ZOOM</span><span>BLENDER → glTF / ORIGINAL ASSET</span></footer>
+    </main>
+    <script type="module" src="/src/asset-preview/biryani.ts"></script>
+  </body>
+</html>

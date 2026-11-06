@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1920" height="1200" viewBox="0 0 1920 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Background">
+<path id="page-left" d="M960 0H0V1200H960V0Z" fill="url(#paint0_radial_0_45)"/>
+<path id="page-right" d="M1920 0H960V1200H1920V0Z" fill="url(#paint1_radial_0_45)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_45" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(288 480) scale(960 1200)">
+<stop stop-color="#8A1318"/>
+<stop offset="1" stop-color="#5C0A0E"/>
+</radialGradient>
+<radialGradient id="paint1_radial_0_45" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1632 480) scale(960 1200)">
+<stop stop-color="#6F0E13"/>
+<stop offset="1" stop-color="#480709"/>
+</radialGradient>
+</defs>
+</svg>

@@ -1,0 +1,36 @@
+@font-face{font-family:'Playfair Display';src:url('../../public/book/playfair-display.ttf');font-weight:400 900}
+.spread-art [style*="mask-image"]{mask-composite:intersect;mask-repeat:no-repeat}
+.spread-art [data-node-id="126:2145"] p{mask-image:none!important}
+.book-display{position:absolute;inset:0;overflow:hidden;perspective:4000px;background:radial-gradient(ellipse at 50% 55%,#38332718,transparent 70%)}
+.bound-book{position:absolute;left:50%;top:50%;width:1920px;height:1200px;transform-origin:center;perspective:4200px;filter:drop-shadow(0 30px 28px #0004)}
+.book-cover{position:absolute;inset:-10px -13px -18px;background:#30251c;border-radius:6px 10px 12px 5px;box-shadow:inset 0 0 0 3px #9b7c42,inset 0 0 0 6px #3b2d20}
+.page-block{position:absolute;inset:3px -5px -10px;border-radius:2px 3px 9px 8px;background:repeating-linear-gradient(0deg,#c7baa2 0px,#c7baa2 1px,#e4d8c2 1px,#e4d8c2 3px);box-shadow:0 3px 4px #0005}
+.book-sheets{position:absolute;inset:0;transform-style:preserve-3d;--turn-shadow:0}
+.bound-half{position:absolute;top:0;width:960px;height:1200px;overflow:hidden;background:#ece0ca}
+.bound-left{left:0;border-radius:3px 0 0 4px}.bound-right{left:960px;border-radius:0 4px 5px 0}
+.half-art{position:absolute;top:0;width:1920px;height:1200px}.bound-left .half-art{left:0}.bound-right .half-art{left:-960px}
+.bound-half:after{content:'';position:absolute;inset:0;pointer-events:none}.bound-left:after{background:linear-gradient(90deg,#fff1 0%,transparent 8%,transparent 92%,#0003 98%,#0007 100%)}.bound-right:after{background:linear-gradient(90deg,#0007 0%,#0002 2%,transparent 9%,transparent 96%,#fff1 100%)}
+.book-gutter{position:absolute;top:0;bottom:0;left:936px;width:48px;z-index:2;pointer-events:none;background:linear-gradient(90deg,transparent,#0001 20%,#0005 46%,#0c0908b0 50%,#0004 55%,transparent);border-radius:45%}
+.cast-shadow{position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(90deg,transparent 15%,#000 50%,transparent 85%);opacity:var(--turn-shadow)}
+.turning-leaf{position:absolute;left:960px;top:0;width:0;height:1200px;z-index:5;transform-style:preserve-3d;pointer-events:none}
+.leaf-strip{position:absolute;top:0;left:0;height:1200px;transform-origin:0 50%;transform-style:preserve-3d;will-change:transform}
+.leaf-face{position:absolute;inset:0;overflow:hidden;backface-visibility:hidden;background:#e5d9c3}
+.leaf-front{transform:translateZ(.18px)}.leaf-back{transform:rotateY(180deg) translateZ(.18px)}
+.strip-art{position:absolute;top:0;width:1920px;height:1200px}
+.leaf-face>i{position:absolute;inset:0;pointer-events:none;background:#000;opacity:var(--shade,0)}
+@media(prefers-reduced-motion:reduce){.leaf-strip{will-change:auto}}
+.bound-book [data-node-id="126:3130"],.bound-book [data-node-id="126:2387"],.bound-book [data-node-id="126:2802"],.bound-book [data-node-id="126:3115"]{transition:translate 1300ms cubic-bezier(.4,0,.2,1),opacity 1100ms ease;will-change:translate,opacity}
+.bound-book[data-travel-chapter="1"]:is([data-travel-phase="lifting"],[data-travel-phase="away"]) [data-node-id="126:3130"],.bound-book[data-travel-chapter="2"]:is([data-travel-phase="lifting"],[data-travel-phase="away"]) [data-node-id="126:2387"],.bound-book[data-travel-chapter="3"]:is([data-travel-phase="lifting"],[data-travel-phase="away"]) [data-node-id="126:2802"]{translate:0 -1600px!important;opacity:0!important}
+.bound-book[data-travel-chapter="5"]:is([data-travel-phase="lifting"],[data-travel-phase="away"]) [data-node-id="126:3115"]{translate:-50% -1600px!important;opacity:0!important}
+@media(prefers-reduced-motion:reduce){.bound-book [data-node-id]{transition-duration:1ms}}
+.mehndi-hand{position:absolute;inset:0;pointer-events:none}
+.mehndi-hand canvas{position:absolute;left:0;width:100%;pointer-events:none}
+.mehndi-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mehndi-hand canvas[data-progress]+.mehndi-fallback{visibility:hidden}
+
+.half-art>.start-screen,.strip-art>.start-screen{width:1920px;height:1200px;inset:0;background:#330606}.bound-book[data-cover-spread="true"] .book-gutter{opacity:0}.bound-half[data-cover-half="true"]:after{background:none}
+
+.fluid-book{position:absolute;inset:0}.curl-page{overflow:hidden;background:#e5d9c3}.curl-page>.bound-half{position:absolute;inset:0!important;width:960px;height:1200px;border-radius:0}.bound-book>.book-gutter{z-index:20;pointer-events:none;width:24px;left:948px;opacity:.65}.bound-book[data-cover-spread="true"]>.book-gutter{opacity:0}.book-display{perspective:none}.bound-book{perspective:none}.fluid-book .stf__block{overflow:hidden}
+
+/* The binding belongs to the resting spread, below the library folding sheet. */
+.book-display[data-book-turning="true"] .bound-book>.book-gutter{visibility:hidden}

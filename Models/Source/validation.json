@@ -1,0 +1,236 @@
+{
+  "blender": "5.2.2 LTS",
+  "reimport": true,
+  "embeddedTextures": true,
+  "groups": [
+    "bowl",
+    "rice",
+    "saffron",
+    "protein",
+    "onions",
+    "herbs",
+    "spices"
+  ],
+  "offsetsTested": [
+    0,
+    0.9,
+    1.5,
+    2.1,
+    2.7,
+    3.3,
+    3.9
+  ],
+  "original": {
+    "bytes": 1436284,
+    "triangles": 54812,
+    "vertices": 31973,
+    "meshes": 10,
+    "primitives": 10,
+    "materials": 10,
+    "images": 0,
+    "nodes": [
+      {
+        "name": "world",
+        "children": [
+          1
+        ]
+      },
+      {
+        "name": "Biryani",
+        "children": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "name": "bowl",
+        "children": [
+          9,
+          10
+        ]
+      },
+      {
+        "name": "rice",
+        "children": [
+          11
+        ]
+      },
+      {
+        "name": "saffron",
+        "children": [
+          12
+        ]
+      },
+      {
+        "name": "protein",
+        "children": [
+          13,
+          14
+        ]
+      },
+      {
+        "name": "onions",
+        "children": [
+          15
+        ]
+      },
+      {
+        "name": "herbs",
+        "children": [
+          16
+        ]
+      },
+      {
+        "name": "spices",
+        "children": [
+          17,
+          18
+        ]
+      },
+      {
+        "name": "Copper_Bowl",
+        "children": []
+      },
+      {
+        "name": "Gold_Rim",
+        "children": []
+      },
+      {
+        "name": "Basmati_Rice_1500",
+        "children": []
+      },
+      {
+        "name": "Saffron_Rice_520",
+        "children": []
+      },
+      {
+        "name": "Meat_Pieces_11",
+        "children": []
+      },
+      {
+        "name": "Vegetable_Pieces_6",
+        "children": []
+      },
+      {
+        "name": "Fried_Onion_Pieces_90",
+        "children": []
+      },
+      {
+        "name": "Mint_Coriander_55",
+        "children": []
+      },
+      {
+        "name": "Whole_Spices_16",
+        "children": []
+      },
+      {
+        "name": "Cashews_16",
+        "children": []
+      }
+    ]
+  },
+  "refined": {
+    "bytes": 7887452,
+    "triangles": 73042,
+    "vertices": 129395,
+    "meshes": 8,
+    "primitives": 8,
+    "materials": 2,
+    "images": 6,
+    "nodes": [
+      {
+        "name": "Hammered_copper_handi",
+        "children": []
+      },
+      {
+        "name": "bowl",
+        "children": [
+          0
+        ]
+      },
+      {
+        "name": "Mint_sprig_and_coriander",
+        "children": []
+      },
+      {
+        "name": "herbs",
+        "children": [
+          2
+        ]
+      },
+      {
+        "name": "Caramelized_onion_ribbons",
+        "children": []
+      },
+      {
+        "name": "onions",
+        "children": [
+          4
+        ]
+      },
+      {
+        "name": "Chicken_on_the_bone",
+        "children": []
+      },
+      {
+        "name": "protein",
+        "children": [
+          6
+        ]
+      },
+      {
+        "name": "Basmati_grains",
+        "children": []
+      },
+      {
+        "name": "rice",
+        "children": [
+          8
+        ]
+      },
+      {
+        "name": "Saffron_filaments",
+        "children": []
+      },
+      {
+        "name": "saffron",
+        "children": [
+          10
+        ]
+      },
+      {
+        "name": "Cashews_16",
+        "children": []
+      },
+      {
+        "name": "Whole_spices_and_raisins",
+        "children": []
+      },
+      {
+        "name": "spices",
+        "children": [
+          12,
+          13
+        ]
+      },
+      {
+        "name": "Biryani_Root",
+        "children": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          14
+        ]
+      }
+    ]
+  },
+  "sourceSHA256": "e2d3d4351d5ae3152d97682b4f4d788775188f55e724ed2bdf40397cdd2b6d4b"
+}

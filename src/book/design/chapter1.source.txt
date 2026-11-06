@@ -1,0 +1,140 @@
+const imgArtCharminar = "https://www.figma.com/api/mcp/asset/12699045-dc27-4f63-b429-02ea3f6768f8.png";
+const imgImageBiryaniDetail1 = "https://www.figma.com/api/mcp/asset/9a842aa4-3aea-40dc-9887-c4d8a145497b.png";
+const imgImageBiryaniBowl = "https://www.figma.com/api/mcp/asset/43bffd9f-bebe-4185-9b47-4f3fcdb327c3.png";
+const imgFinal = "https://www.figma.com/api/mcp/asset/a699a103-bea0-4b6e-b9dd-29fa7aaba647.svg";
+const imgMoon = "https://www.figma.com/api/mcp/asset/9fce27e3-ef1d-4aa9-8565-6cc809ba21d7.svg";
+const imgSpine = "https://www.figma.com/api/mcp/asset/37cf0446-db0a-44f1-8dab-6ef69ea87e38.svg";
+const imgPatternStars = "https://www.figma.com/api/mcp/asset/b6c57e34-27fc-4bc0-b18d-caec8ff6dc4a.svg";
+const imgPatternStars1 = "https://www.figma.com/api/mcp/asset/60884938-cd27-4939-8aae-4fdd2c681bcd.svg";
+const imgPhotoRing = "https://www.figma.com/api/mcp/asset/54e086e2-a23a-49f9-bd72-b16ab71eb165.svg";
+const imgPhotoRing1 = "https://www.figma.com/api/mcp/asset/4dd0e2ce-b781-42e0-9194-3ae2dd21f751.svg";
+const imgImageBiryaniDetail = "https://www.figma.com/api/mcp/asset/c1cf6fab-c908-4b18-bfe7-c1f42fae4e7c.svg";
+const imgEllipse3 = "https://www.figma.com/api/mcp/asset/26a7a3f7-e4da-4913-8c88-8f12699afbe1.svg";
+const imgRuleTop = "https://www.figma.com/api/mcp/asset/d0f7a8e1-cb31-4347-88ee-a1e910559a91.svg";
+
+export default function Final() {
+  return (
+    <div className="relative size-full" data-node-id="126:2098" data-name="FINAL">
+      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFinal} />
+      <div className="absolute contents inset-[-1.83%_50.83%_27.25%_3.33%]" data-node-id="126:2102" data-name="Left-Page">
+        <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[4.25%_86.04%_92.17%_3.33%] leading-[normal] text-[#e7d3b0] text-[32px] whitespace-nowrap" data-node-id="126:2103">
+          CHAPTER 01
+        </p>
+        <div className="absolute inset-[-1.83%_52.34%_60%_21.51%]" data-node-id="126:2104" data-name="moon">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoon} />
+        </div>
+        <div className="absolute inset-[32.08%_50.83%_27.25%_29.17%]" data-node-id="126:2105" data-name="art-charminar">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgArtCharminar} />
+          </div>
+        </div>
+      </div>
+      <div className="absolute inset-[0_48.18%]" data-node-id="126:2107" data-name="Spine">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSpine} />
+      </div>
+      <div className="absolute bottom-0 contents left-1/2 right-0 top-0" data-node-id="126:2108" data-name="Clip path group">
+        <div className="absolute contents inset-[-3.42%_-10.68%_-8.33%_53.23%]" data-node-id="126:2111" data-name="Right-Page">
+          <div className="absolute bottom-1/2 left-[53.59%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-69px_-115px] mask-size-[960px_1200px] right-[17.92%] top-[9.58%]" data-node-id="126:2112" style={{ maskImage: `url("${imgPatternStars}")` }} data-name="pattern-stars">
+            <div className="absolute inset-[-0.32%_-0.29%]">
+              <img alt="" className="block max-w-none size-full" src={imgPatternStars1} />
+            </div>
+          </div>
+          <div className="absolute flex inset-[-3.42%_-10.68%_-8.33%_84.9%] items-center justify-center" data-node-id="126:2145" style={{ containerType: "size" }}>
+            <div className="-rotate-90 flex-none h-[100cqw] w-[100cqh]">
+              <p className="[word-break:break-word] font-['Poppins:Bold'] leading-[normal] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-670px_41px] mask-size-[960px_1200px] not-italic relative text-[330px] text-[rgba(217,187,120,0.16)] whitespace-nowrap" style={{ maskImage: `url("${imgPatternStars}")` }}>
+                BIRYANI
+              </p>
+            </div>
+          </div>
+          <p className="[word-break:break-word] absolute font-['Poppins:Bold'] inset-[4.25%_39.95%_94.08%_53.33%] leading-[normal] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-64px_-51px] mask-size-[960px_1200px] not-italic text-[#e7d3b0] text-[13px] whitespace-nowrap" data-node-id="126:2146" style={{ maskImage: `url("${imgPatternStars}")` }}>
+            THE ART OF BIRYANI
+          </p>
+          <div className="absolute contents inset-[31.92%_2.33%_27%_71.93%]" data-node-id="126:2147">
+            <div className="absolute contents inset-[31.92%_2.33%_27%_71.93%]" data-node-id="126:3130">
+              <div className="absolute inset-[31.92%_4.16%_29.83%_71.93%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-421px_-383px] mask-size-[960px_1200px]" data-node-id="126:2148" style={{ maskImage: `url("${imgPatternStars}")` }} data-name="photo-ring">
+                <div className="absolute inset-[-0.33%]">
+                  <img alt="" className="block max-w-none size-full" src={imgPhotoRing} />
+                </div>
+              </div>
+              <div className="absolute inset-[34.75%_2.33%_27%_73.76%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-456.131px_-416.96px] mask-size-[960px_1200px]" data-node-id="126:3120" style={{ maskImage: `url("${imgPatternStars}")` }} data-name="photo-ring">
+                <div className="absolute inset-[-16.34%]">
+                  <img alt="" className="block max-w-none size-full" src={imgPhotoRing1} />
+                </div>
+              </div>
+              <div className="absolute contents inset-[32.5%_4.53%_30.42%_72.29%]" data-node-id="126:2149" data-name="Clip path group">
+                <div className="absolute inset-[32.5%_4.53%_30.42%_72.29%] mask-position-[-428.026px_-390.026px,_0px_0px] mask-size-[960px_1200px,_444.988px_444.988px]" data-node-id="126:2152" style={{ maskImage: `url("${imgPatternStars}"), url("${imgImageBiryaniDetail}")` }} data-name="image-biryani-detail">
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgImageBiryaniDetail1} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="[word-break:break-word] absolute bottom-[11.5%] contents font-['Poppins:Bold'] leading-[normal] left-[53.23%] not-italic right-1/4 text-[66px] top-[67.58%] whitespace-nowrap" data-node-id="126:3131">
+            <p className="absolute bottom-[24.17%] left-[53.23%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-62px_-811px] mask-size-[960px_1200px] right-1/4 text-[#eadba8] top-[67.58%]" data-node-id="126:2153" style={{ maskImage: `url("${imgPatternStars}")` }}>
+              A royal dish,
+            </p>
+            <p className="absolute inset-[73.92%_28.39%_17.83%_53.23%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-62px_-887px] mask-size-[960px_1200px] text-[#eadba8]" data-node-id="126:2154" style={{ maskImage: `url("${imgPatternStars}")` }}>
+              with a rich
+            </p>
+            <p className="absolute inset-[80.25%_33.28%_11.5%_53.23%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-62px_-963px] mask-size-[960px_1200px] text-[#f26a21]" data-node-id="126:2155" style={{ maskImage: `url("${imgPatternStars}")` }}>
+              history.
+            </p>
+          </div>
+          <p className="[word-break:break-word] absolute font-['Poppins:Regular'] inset-[89.83%_25.42%_7.75%_53.23%] leading-[normal] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-62px_-1078px] mask-size-[960px_1200px] not-italic text-[#e7d3b0] text-[19px] whitespace-nowrap" data-node-id="126:2156" style={{ maskImage: `url("${imgPatternStars}")` }}>
+            From royal kitchens to your Sunday table —
+          </p>
+          <p className="[word-break:break-word] absolute font-['Poppins:Regular'] inset-[92.33%_27.66%_5.25%_53.23%] leading-[normal] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-62px_-1108px] mask-size-[960px_1200px] not-italic text-[#e7d3b0] text-[19px] whitespace-nowrap" data-node-id="126:2157" style={{ maskImage: `url("${imgPatternStars}")` }}>
+            biryani has traveled through centuries.
+          </p>
+        </div>
+        <div className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[12.42%_18.65%_70.92%_53.39%] leading-[0] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-65px_-149px] mask-size-[960px_1200px] text-[#eadba8] text-[104px] whitespace-nowrap" data-node-id="126:2158" style={{ maskImage: `url("${imgPatternStars}")` }}>
+          <p className="leading-[100px] mb-0 whitespace-pre">{`CRAVING `}</p>
+          <p className="leading-[100px] whitespace-pre">BIRYANI ?</p>
+        </div>
+      </div>
+      <div className="absolute inset-[6.08%_56.04%_53.5%_15.47%]" data-node-id="126:2163" data-name="pattern-stars">
+        <div className="absolute inset-[-0.32%_-0.29%]">
+          <img alt="" className="block max-w-none size-full" src={imgPatternStars1} />
+        </div>
+      </div>
+      <div className="absolute left-[-147px] size-[829px] top-[283px]" data-node-id="126:3118">
+        <div className="absolute inset-[-5.31%]">
+          <img alt="" className="block max-w-none size-full" src={imgEllipse3} />
+        </div>
+      </div>
+      <div className="absolute inset-[16.58%_66.67%_9.5%_0]" data-node-id="126:2196" data-name="image-biryani-bowl">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgImageBiryaniBowl} />
+        </div>
+      </div>
+      <div className="absolute contents inset-[13.83%_50.83%_16.67%_27.71%]" data-node-id="126:2159">
+        <div className="absolute inset-[27.25%_61.37%_72.75%_28.07%]" data-node-id="126:2160" data-name="rule-top">
+          <div className="absolute inset-[-0.75px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgRuleTop} />
+          </div>
+        </div>
+        <div className="absolute inset-[13.83%_61.37%_86.17%_28.07%]" data-node-id="126:2161" data-name="rule-bottom">
+          <div className="absolute inset-[-0.75px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgRuleTop} />
+          </div>
+        </div>
+        <div className="absolute inset-[83.33%_59.75%_16.67%_29.69%]" data-node-id="126:3116" data-name="rule-bottom">
+          <div className="absolute inset-[-0.75px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgRuleTop} />
+          </div>
+        </div>
+        <div className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[14.42%_50.83%_72.75%_27.71%] leading-[0] text-[#eadba8] text-[57px] whitespace-pre-wrap" data-node-id="126:2162">
+          <p className="leading-[normal] mb-0">{`The Art `}</p>
+          <p className="leading-[normal]">OF Biryani</p>
+        </div>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[75.67%_55.94%_17.17%_29.69%] leading-[normal] text-[#e7d3b0] text-[32px]" data-node-id="126:3122">
+        Maldevta Biryani
+      </p>
+      <p className="[word-break:break-word] absolute font-['Poppins:Bold'] inset-[93.5%_98.75%_4.83%_0.52%] leading-[normal] not-italic text-[#d9bb78] text-[13px] whitespace-nowrap" data-node-id="126:3172">
+        01
+      </p>
+    </div>
+  );
+}

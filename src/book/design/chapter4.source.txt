@@ -1,0 +1,311 @@
+const imgVector = "https://www.figma.com/api/mcp/asset/7c1f208c-7e8f-48c9-bc41-60df4a8eb8d4.png";
+const imgStunningArabicMehndiDesignElegantBridalHennaRemovebgPreview1 = "https://www.figma.com/api/mcp/asset/6d80d68a-9926-43cb-b258-3b5c7b3b05b5.png";
+const imgFinal = "https://www.figma.com/api/mcp/asset/21b53899-e474-49e2-ad77-46c561bb3904.svg";
+const imgRuleTitle = "https://www.figma.com/api/mcp/asset/2c5ce1bc-bf35-4d68-a407-4f2591361ec3.svg";
+const imgRuleTitle1 = "https://www.figma.com/api/mcp/asset/5ea24366-d450-4bd2-b05b-63089a2b4f0a.svg";
+const imgPaisley = "https://www.figma.com/api/mcp/asset/bfc4569b-6925-4c9c-b129-a2df2f98e6d4.svg";
+const imgPaisley1 = "https://www.figma.com/api/mcp/asset/56842a66-0360-4ba4-9618-8d48cfce9d7f.svg";
+const imgPaisley2 = "https://www.figma.com/api/mcp/asset/b3331173-2850-48c0-9a71-eb512f86acad.svg";
+const imgPaisley3 = "https://www.figma.com/api/mcp/asset/e844bbb4-ea75-40fb-ae3c-e15f7fb8feed.svg";
+const imgVector1 = "https://www.figma.com/api/mcp/asset/8a330bd9-2542-413a-9ee8-acd67ca5f2f5.svg";
+const imgSpine = "https://www.figma.com/api/mcp/asset/95db1c22-5f67-4df4-8800-30fdd404703e.svg";
+const imgPaisley4 = "https://www.figma.com/api/mcp/asset/1af9cf7d-845e-471b-b491-42c5062a42d7.svg";
+const imgPaisley5 = "https://www.figma.com/api/mcp/asset/a312fc2a-bba8-4c51-8251-9a53d43421c3.svg";
+const imgRuleIntro = "https://www.figma.com/api/mcp/asset/676f0051-2569-4b5d-a250-5e402ce0a433.svg";
+const imgMotifLineArt = "https://www.figma.com/api/mcp/asset/2cb2d53f-1221-473d-952d-f7cfa807f4e5.svg";
+
+export default function Final() {
+  return (
+    <div className="bg-[#242f3c] relative size-full" data-node-id="126:2388" data-name="FINAL">
+      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFinal} />
+      <div className="absolute contents inset-[2.08%_39.84%_2.75%_-12.29%]" data-node-id="126:2392" data-name="Left-Page">
+        <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[3.29%_86.25%_93.13%_2.81%] leading-[normal] text-[#e7d3b0] text-[32px] whitespace-nowrap" data-node-id="126:2393">
+          CHAPTER 02
+        </p>
+        <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[10.42%_67.92%_82.17%_3.33%] leading-[normal] text-[#f3e6c8] text-[66px] uppercase whitespace-nowrap" data-node-id="126:2394">{`Decoding the `}</p>
+        <div className="absolute inset-[27.42%_53.85%_72.58%_2.81%]" data-node-id="126:2395" data-name="rule-title">
+          <div className="absolute inset-[-0.75px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgRuleTitle} />
+          </div>
+        </div>
+        <div className="absolute inset-[8.25%_53.85%_91.75%_2.81%]" data-node-id="126:3166" data-name="rule-title">
+          <div className="absolute inset-[-0.75px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgRuleTitle1} />
+          </div>
+        </div>
+        <div className="absolute contents inset-[29.67%_71.15%_7.42%_-12.29%]" data-node-id="126:2396" data-name="left-circle-art">
+          <div className="absolute inset-[29.67%_71.15%_7.42%_-12.29%]" data-node-id="126:2397" data-name="Vector">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" height="755" src={imgVector} width="790" />
+          </div>
+          <div className="absolute flex inset-[70.42%_102.36%_21.67%_-7.87%] items-center justify-center" data-node-id="126:2398" style={{ containerType: "size" }}>
+            <div className="flex-none h-[hypot(68.8456cqw,-58.4263cqh)] rotate-[-129.85deg] skew-x-[-2.55deg] w-[hypot(-31.1544cqw,-41.5737cqh)]">
+              <div className="relative size-full" data-name="paisley">
+                <div className="absolute inset-[-1.48%_-2.63%]">
+                  <img alt="" className="block max-w-none size-full" src={imgPaisley} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute flex inset-[62.05%_105.41%_32.2%_-10.75%] items-center justify-center" data-node-id="126:2402" style={{ containerType: "size" }}>
+            <div className="flex-none h-[hypot(88.5335cqw,-28.6849cqh)] rotate-[-103.44deg] skew-x-[-1.13deg] w-[hypot(-11.4665cqw,-71.3151cqh)]">
+              <div className="relative size-full" data-name="paisley">
+                <div className="absolute inset-[-1.45%_-2.67%]">
+                  <img alt="" className="block max-w-none size-full" src={imgPaisley1} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute flex inset-[51.56%_105.4%_42.69%_-10.74%] items-center justify-center" data-node-id="126:2406" style={{ containerType: "size" }}>
+            <div className="flex-none h-[hypot(88.5335cqw,28.6849cqh)] rotate-[-76.56deg] skew-x-[1.13deg] w-[hypot(11.4665cqw,-71.3151cqh)]">
+              <div className="relative size-full" data-name="paisley">
+                <div className="absolute inset-[-1.45%_-2.67%]">
+                  <img alt="" className="block max-w-none size-full" src={imgPaisley2} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute flex inset-[41.04%_102.34%_51.05%_-7.84%] items-center justify-center" data-node-id="126:2410" style={{ containerType: "size" }}>
+            <div className="flex-none h-[hypot(68.8456cqw,58.4263cqh)] rotate-[-50.15deg] skew-x-[2.55deg] w-[hypot(31.1544cqw,-41.5737cqh)]">
+              <div className="relative size-full" data-name="paisley">
+                <div className="absolute inset-[-1.48%_-2.63%]">
+                  <img alt="" className="block max-w-none size-full" src={imgPaisley3} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute inset-[29.67%_71.15%_7.42%_-12.29%]" data-node-id="126:2414" data-name="Vector">
+            <div className="absolute inset-[-0.4%_-0.38%]">
+              <img alt="" className="block max-w-none size-full" src={imgVector1} />
+            </div>
+          </div>
+        </div>
+        <p className="[word-break:break-word] absolute font-['Poppins:Bold'] inset-[95.58%_95.73%_2.75%_3.33%] leading-[normal] not-italic text-[#d9bb78] text-[13px] whitespace-nowrap" data-node-id="126:2416">
+          04
+        </p>
+        <p className="[word-break:break-word] absolute font-['Poppins:Bold'] inset-[2.08%_39.84%_96.25%_53.02%] leading-[normal] not-italic text-[#d9bb78] text-[13px] text-right whitespace-nowrap" data-node-id="126:2417">
+          INDIA THROUGH TIME
+        </p>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[17.75%_33.44%_74.58%_3.33%] leading-[normal] text-[80px] text-white uppercase" data-node-id="126:3164">
+        Mughal Aesthetic
+      </p>
+      <div className="absolute inset-[0_48.18%]" data-node-id="126:2418" data-name="Spine">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSpine} />
+      </div>
+      <div className="absolute flex inset-[3.75%_-9.32%_2.42%_85.89%] items-center justify-center" data-node-id="126:2419" style={{ containerType: "size" }}>
+        <div className="-rotate-90 flex-none h-[100cqw] w-[100cqh]">
+          <p className="[word-break:break-word] font-['Poppins:Bold'] leading-[normal] not-italic relative text-[300px] text-[rgba(255,255,255,0.18)] whitespace-nowrap">MOTIFS</p>
+        </div>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[12%_5.57%_76.33%_54.37%] leading-[normal] text-[#f3e6c8] text-[104px] whitespace-nowrap" data-node-id="126:2420">
+        NOTICED THE
+      </p>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[20.58%_15.05%_67.75%_54.58%] leading-[normal] text-[#f3e6c8] text-[104px] whitespace-nowrap" data-node-id="126:2421">
+        Patterns ?
+      </p>
+      <div className="absolute contents inset-[6.75%_12.94%_59.58%_53.02%]" data-node-id="126:2422" data-name="motif-pattern">
+        <div className="absolute inset-[6.75%_42.73%_88.92%_55.73%] opacity-20" data-node-id="126:2423" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley4} />
+          </div>
+        </div>
+        <div className="absolute inset-[6.75%_37.32%_88.92%_61.15%] opacity-20" data-node-id="126:2427" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley4} />
+          </div>
+        </div>
+        <div className="absolute inset-[6.75%_31.9%_88.92%_66.56%] opacity-20" data-node-id="126:2431" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[6.75%_26.48%_88.92%_71.98%] opacity-20" data-node-id="126:2435" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[6.75%_21.07%_88.92%_77.4%] opacity-20" data-node-id="126:2439" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[6.75%_15.65%_88.92%_82.81%] opacity-20" data-node-id="126:2443" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[14.08%_45.44%_81.58%_53.02%] opacity-20" data-node-id="126:2447" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley4} />
+          </div>
+        </div>
+        <div className="absolute inset-[14.08%_40.03%_81.58%_58.44%] opacity-20" data-node-id="126:2451" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley4} />
+          </div>
+        </div>
+        <div className="absolute inset-[14.08%_34.61%_81.58%_63.85%] opacity-20" data-node-id="126:2455" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[14.08%_29.19%_81.58%_69.27%] opacity-20" data-node-id="126:2459" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[14.08%_23.78%_81.58%_74.69%] opacity-20" data-node-id="126:2463" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[14.08%_18.36%_81.58%_80.1%] opacity-20" data-node-id="126:2467" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[14.08%_12.94%_81.58%_85.52%] opacity-20" data-node-id="126:2471" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[21.42%_42.73%_74.25%_55.73%] opacity-20" data-node-id="126:2475" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley4} />
+          </div>
+        </div>
+        <div className="absolute inset-[21.42%_37.32%_74.25%_61.15%] opacity-20" data-node-id="126:2479" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley4} />
+          </div>
+        </div>
+        <div className="absolute inset-[21.42%_31.9%_74.25%_66.56%] opacity-20" data-node-id="126:2483" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[21.42%_26.48%_74.25%_71.98%] opacity-20" data-node-id="126:2487" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[21.42%_21.07%_74.25%_77.4%] opacity-20" data-node-id="126:2491" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[21.42%_15.65%_74.25%_82.81%] opacity-20" data-node-id="126:2495" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[28.75%_45.44%_66.92%_53.02%] opacity-20" data-node-id="126:2499" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley4} />
+          </div>
+        </div>
+        <div className="absolute inset-[28.75%_40.03%_66.92%_58.44%] opacity-20" data-node-id="126:2503" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley4} />
+          </div>
+        </div>
+        <div className="absolute inset-[28.75%_34.61%_66.92%_63.85%] opacity-20" data-node-id="126:2507" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[28.75%_29.19%_66.92%_69.27%] opacity-20" data-node-id="126:2511" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[28.75%_23.78%_66.92%_74.69%] opacity-20" data-node-id="126:2515" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[28.75%_18.36%_66.92%_80.1%] opacity-20" data-node-id="126:2519" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[28.75%_12.94%_66.92%_85.52%] opacity-20" data-node-id="126:2523" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[36.08%_42.73%_59.58%_55.73%] opacity-20" data-node-id="126:2527" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley4} />
+          </div>
+        </div>
+        <div className="absolute inset-[36.08%_37.32%_59.58%_61.15%] opacity-20" data-node-id="126:2531" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley4} />
+          </div>
+        </div>
+        <div className="absolute inset-[36.08%_31.9%_59.58%_66.56%] opacity-20" data-node-id="126:2535" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[36.08%_26.48%_59.58%_71.98%] opacity-20" data-node-id="126:2539" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[36.08%_21.07%_59.58%_77.4%] opacity-20" data-node-id="126:2543" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+        <div className="absolute inset-[36.08%_15.65%_59.58%_82.81%] opacity-20" data-node-id="126:2547" data-name="paisley">
+          <div className="absolute inset-[-1.73%_-3.05%]">
+            <img alt="" className="block max-w-none size-full" src={imgPaisley5} />
+          </div>
+        </div>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Poppins:Regular'] inset-[91.32%_33.59%_7.02%_54.37%] leading-[normal] not-italic text-[#e9e4d8] text-[13.2px] whitespace-nowrap" data-node-id="126:2554">
+        From jaali screens to silk borders —
+      </p>
+      <p className="[word-break:break-word] absolute font-['Poppins:Regular'] inset-[92.98%_29.17%_5.35%_54.37%] leading-[normal] not-italic text-[#e9e4d8] text-[13.2px] whitespace-nowrap" data-node-id="126:2555">
+        Mughal motifs have travelled through centuries.
+      </p>
+      <div className="absolute aspect-[1081.4137659412809/1167.3214034969897] flex items-center justify-center left-[59.32%] right-[-15.65%] top-[187px]" data-node-id="126:2588" style={{ containerType: "size" }}>
+        <div className="-rotate-30 flex-none h-[hypot(43.4823cqw,69.7709cqh)] w-[hypot(56.5177cqw,-30.2291cqh)]">
+          <div className="relative size-full" data-name="__Stunning_Arabic_Mehndi_Design___Elegant_Bridal_Henna___-removebg-preview 1">
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgStunningArabicMehndiDesignElegantBridalHennaRemovebgPreview1} />
+          </div>
+        </div>
+      </div>
+      <div className="[word-break:break-word] absolute contents font-['Poppins:Bold'] inset-[65.58%_16.3%_8.92%_54.37%] not-italic text-[66px]" data-node-id="126:3154">
+        <p className="absolute inset-[65.58%_16.3%_23.25%_54.37%] leading-[67px] text-[#eadba8]" data-node-id="126:3155">
+          A royal language,
+        </p>
+        <p className="absolute inset-[76.5%_26.98%_15.25%_54.37%] leading-[normal] text-[#eadba8] whitespace-nowrap" data-node-id="126:3156">
+          stitched in
+        </p>
+        <p className="absolute inset-[82.83%_24.69%_8.92%_54.37%] leading-[normal] text-[#efba43] whitespace-nowrap" data-node-id="126:3157">
+          every petal.
+        </p>
+      </div>
+      <div className="absolute inset-[94.08%_53.33%_5.92%_29.9%]" data-node-id="131:716" data-name="rule-intro">
+        <div className="absolute inset-[-1px_0]">
+          <img alt="" className="block max-w-none size-full" src={imgRuleIntro} />
+        </div>
+      </div>
+      <div className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[84.08%_58.44%_8.75%_30.05%] leading-[0] text-[#e7d3b0] text-[32px]" data-node-id="131:745">
+        <p className="leading-[normal] mb-0">Maldevta</p>
+        <p className="leading-[normal]">Motifs</p>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Playfair_Display:Regular'] font-normal inset-[65.5%_53.85%_22.5%_29.84%] leading-[normal] text-[#ffc33e] text-[36px]" data-node-id="131:746">
+        From imperial gardens to timeless decorative patterns.
+      </p>
+      <div className="absolute inset-[32.25%_59.63%_36.81%_30.52%]" data-node-id="131:748" data-name="motif-line-art">
+        <div className="absolute inset-[-0.24%_-0.48%]">
+          <img alt="" className="block max-w-none size-full" src={imgMotifLineArt} />
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,8 @@
+{
+  "before": 12415908,
+  "after": 7887452,
+  "positions": "normalized int16, uniform mesh decode scale 2",
+  "maximumPositionError": 3.051850947599719e-05,
+  "UVs": "normalized uint16",
+  "normalTangents": "normalized int8"
+}

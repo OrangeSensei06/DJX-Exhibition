@@ -1,0 +1,13 @@
+import {useEffect,useRef,useState} from 'react';
+import type {Snapshot,WindowRole} from '../../shared/protocol';
+import './architecture.css';
+type State=Snapshot['architecture'];
+const send=(a:'start'|'lift'|'open'|'return'|'next'|'reset'|'exit')=>void window.exhibition?.architectureAction(a);
+export function ArchitectureChapter({role,state}:{role:WindowRole;state:State}){
+ const frame=useRef<HTMLIFrameElement>(null),host=useRef<HTMLElement>(null),[scale,setScale]=useState(0);
+ useEffect(()=>{const o=new ResizeObserver(([e])=>setScale(Math.min(e.contentRect.width/1080,e.contentRect.height/1920)));o.observe(host.current!);return()=>o.disconnect()},[]);
+ useEffect(()=>{const f=(e:MessageEvent)=>{if(e.source!==frame.current?.contentWindow||e.origin!==location.origin)return;if(e.data?.type==='architecture-phase')void window.exhibition?.architectureAction('phase',e.data.phase);if(e.data?.type==='architecture-request'&&['open','return','reset','next'].includes(e.data.action))send(e.data.action)};window.addEventListener('message',f);return()=>window.removeEventListener('message',f)},[]);
+ useEffect(()=>{if(state.command)frame.current?.contentWindow?.postMessage({type:'architecture-command',action:state.command},'*')},[state.commandId,state.command]);
+ return <section ref={host} className={`architecture-chapter architecture-surface-${role}`} data-architecture-phase={state.phase}><div className="architecture-scaled" style={{width:1080,height:1920,transform:`translate(-50%,-50%) scale(${scale})`}}>{state.phase!=='WAIT'&&<iframe key={state.generation} ref={frame} title="Chapter 03 · Beyond the Arches" src="./architecture/index.html" className="architecture-animation"/>}</div></section>
+}
+export function ArchitectureControls({state}:{state:State}){return <section className="setup-section"><h3>Chapter 03 · Beyond the Arches</h3><div className="fashion-controls"><button className="control-button" onClick={()=>send('start')}>Open Chapter 3</button><button className="control-button" disabled={!state.active||state.phase!=='WAIT'} onClick={()=>send('lift')}>Swipe up · bring to gallery ↑</button><button className="control-button" disabled={!state.active||state.phase!=='idle'} onClick={()=>send('open')}>Open the doors</button><button className="control-button" disabled={!state.active||state.phase!=='inside'} onClick={()=>send('return')}>Return to the gate</button><button className="control-button" disabled={!state.active||!['idle','inside'].includes(state.phase)} onClick={()=>send('next')}>Next chapter</button><button className="control-button" onClick={()=>send('reset')}>Reset to waiting</button></div><p className="setup-note">Stage: {state.phase}</p></section>}

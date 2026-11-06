@@ -1,0 +1,18 @@
+{
+  "metadataVersion": 2,
+  "sources": [
+    {
+      "name": "hand_detector.tflite",
+      "url": "https://storage.googleapis.com/mediapipe-assets/palm_detection_lite.tflite",
+      "bytes": 1985440,
+      "sha256": "e9a4aaddf90dda56a87235303cf00e4c2d3fb28725f68fd88772997dac905c18"
+    },
+    {
+      "name": "hand_landmarks_detector.tflite",
+      "url": "https://storage.googleapis.com/mediapipe-assets/hand_landmark_lite.tflite",
+      "bytes": 2071408,
+      "sha256": "d7fde8ac11f8ce03f8663775bfc323f4fc9f2a38062b4f4efa142874ef5b2a48"
+    }
+  ],
+  "packaging": "Google Lite model weights, with preprocessing/output metadata and associated labels copied from the official full Tasks bundle"
+}

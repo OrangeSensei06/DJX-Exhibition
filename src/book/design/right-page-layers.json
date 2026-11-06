@@ -1,0 +1,828 @@
+{
+  "1": [
+    {
+      "id": "126:2111",
+      "name": "Right-Page"
+    },
+    {
+      "id": "126:2112",
+      "name": "pattern-stars"
+    },
+    {
+      "id": "126:2145",
+      "name": "126:2145"
+    },
+    {
+      "id": "126:2146",
+      "name": "126:2146"
+    },
+    {
+      "id": "126:2147",
+      "name": "126:2147"
+    },
+    {
+      "id": "126:3130",
+      "name": "126:3130"
+    },
+    {
+      "id": "126:2148",
+      "name": "photo-ring"
+    },
+    {
+      "id": "126:3120",
+      "name": "photo-ring"
+    },
+    {
+      "id": "126:2149",
+      "name": "Clip path group"
+    },
+    {
+      "id": "126:2152",
+      "name": "image-biryani-detail"
+    },
+    {
+      "id": "126:3131",
+      "name": "126:3131"
+    },
+    {
+      "id": "126:2153",
+      "name": "126:2153"
+    },
+    {
+      "id": "126:2154",
+      "name": "126:2154"
+    },
+    {
+      "id": "126:2155",
+      "name": "126:2155"
+    },
+    {
+      "id": "126:2156",
+      "name": "126:2156"
+    },
+    {
+      "id": "126:2157",
+      "name": "126:2157"
+    },
+    {
+      "id": "126:2158",
+      "name": "126:2158"
+    }
+  ],
+  "2": [
+    {
+      "id": "126:2211",
+      "name": "126:2211"
+    },
+    {
+      "id": "126:2213",
+      "name": "126:2213"
+    },
+    {
+      "id": "126:2216",
+      "name": "anarkali-pattern"
+    },
+    {
+      "id": "126:2217",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2220",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2223",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2226",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2229",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2232",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2235",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2238",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2241",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2244",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2247",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2250",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2253",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2256",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2259",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2262",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2265",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2268",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2271",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2274",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2277",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2280",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2283",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2286",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2289",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2292",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2295",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2298",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2301",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2304",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2307",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2310",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2313",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2316",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2319",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2322",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2325",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2328",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2331",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2334",
+      "name": "anarkali-motif"
+    },
+    {
+      "id": "126:2337",
+      "name": "126:2337"
+    },
+    {
+      "id": "126:3124",
+      "name": "126:3124"
+    },
+    {
+      "id": "126:2338",
+      "name": "126:2338"
+    },
+    {
+      "id": "126:2339",
+      "name": "126:2339"
+    },
+    {
+      "id": "126:2340",
+      "name": "126:2340"
+    },
+    {
+      "id": "126:2341",
+      "name": "126:2341"
+    },
+    {
+      "id": "126:2342",
+      "name": "126:2342"
+    },
+    {
+      "id": "126:3125",
+      "name": "126:3125"
+    },
+    {
+      "id": "126:3129",
+      "name": "126:3129"
+    },
+    {
+      "id": "126:2214",
+      "name": "126:2214"
+    },
+    {
+      "id": "126:2215",
+      "name": "126:2215"
+    }
+  ],
+  "3": [
+    {
+      "id": "126:2600",
+      "name": "126:2600"
+    },
+    {
+      "id": "126:2601",
+      "name": "126:2601"
+    },
+    {
+      "id": "126:2602",
+      "name": "126:2602"
+    },
+    {
+      "id": "126:2603",
+      "name": "arch-pattern"
+    },
+    {
+      "id": "126:2604",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2608",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2612",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2616",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2620",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2624",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2628",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2632",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2636",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2640",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2644",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2648",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2652",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2656",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2660",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2664",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2668",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2672",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2676",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2680",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2684",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2688",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2692",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2696",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2700",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2704",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2708",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2712",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2716",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2720",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2724",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2728",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2732",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2736",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2740",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2744",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2748",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2752",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2756",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2760",
+      "name": "arch-motif"
+    },
+    {
+      "id": "126:2764",
+      "name": "126:2764"
+    },
+    {
+      "id": "126:2768",
+      "name": "126:2768"
+    },
+    {
+      "id": "126:2769",
+      "name": "126:2769"
+    },
+    {
+      "id": "126:3132",
+      "name": "126:3132"
+    },
+    {
+      "id": "126:3133",
+      "name": "126:3133"
+    },
+    {
+      "id": "126:3134",
+      "name": "126:3134"
+    },
+    {
+      "id": "126:3135",
+      "name": "126:3135"
+    },
+    {
+      "id": "131:458",
+      "name": "131:458"
+    },
+    {
+      "id": "126:2802",
+      "name": "image 30"
+    }
+  ],
+  "4": [
+    {
+      "id": "126:2417",
+      "name": "126:2417"
+    },
+    {
+      "id": "126:2419",
+      "name": "126:2419"
+    },
+    {
+      "id": "126:2420",
+      "name": "126:2420"
+    },
+    {
+      "id": "126:2421",
+      "name": "126:2421"
+    },
+    {
+      "id": "126:2422",
+      "name": "motif-pattern"
+    },
+    {
+      "id": "126:2423",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2427",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2431",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2435",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2439",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2443",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2447",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2451",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2455",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2459",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2463",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2467",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2471",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2475",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2479",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2483",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2487",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2491",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2495",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2499",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2503",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2507",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2511",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2515",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2519",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2523",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2527",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2531",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2535",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2539",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2543",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2547",
+      "name": "paisley"
+    },
+    {
+      "id": "126:2554",
+      "name": "126:2554"
+    },
+    {
+      "id": "126:2555",
+      "name": "126:2555"
+    },
+    {
+      "id": "126:2588",
+      "name": "126:2588"
+    },
+    {
+      "id": "126:3154",
+      "name": "126:3154"
+    },
+    {
+      "id": "126:3155",
+      "name": "126:3155"
+    },
+    {
+      "id": "126:3156",
+      "name": "126:3156"
+    },
+    {
+      "id": "126:3157",
+      "name": "126:3157"
+    }
+  ],
+  "5": [
+    {
+      "id": "126:2817",
+      "name": "126:2817"
+    },
+    {
+      "id": "126:2819",
+      "name": "126:2819"
+    },
+    {
+      "id": "126:2820",
+      "name": "126:2820"
+    },
+    {
+      "id": "126:2821",
+      "name": "126:2821"
+    },
+    {
+      "id": "126:2822",
+      "name": "jhumka-pattern-left"
+    },
+    {
+      "id": "126:2823",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2833",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2843",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2853",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2863",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2873",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2883",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2893",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2903",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2913",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2923",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2933",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2943",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2953",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2963",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2973",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2983",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:2993",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:3003",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:3013",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:3023",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:3033",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:3043",
+      "name": "jhumka-motif"
+    },
+    {
+      "id": "126:3053",
+      "name": "126:3053"
+    },
+    {
+      "id": "126:3057",
+      "name": "126:3057"
+    },
+    {
+      "id": "126:3058",
+      "name": "126:3058"
+    },
+    {
+      "id": "126:3115",
+      "name": "126:3115"
+    },
+    {
+      "id": "126:3159",
+      "name": "126:3159"
+    },
+    {
+      "id": "126:3160",
+      "name": "126:3160"
+    },
+    {
+      "id": "126:3161",
+      "name": "126:3161"
+    },
+    {
+      "id": "126:3162",
+      "name": "126:3162"
+    }
+  ]
+}

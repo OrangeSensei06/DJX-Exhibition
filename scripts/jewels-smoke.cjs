@@ -1,0 +1,32 @@
+const {app,BrowserWindow}=require('electron');
+const assert=require('node:assert/strict'),fs=require('node:fs');
+require('../dist-electron/electron/main.js');
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+async function until(label,fn){for(let i=0;i<180;i++){if(await fn())return;await wait(100)}throw Error('Timed out: '+label)}
+(async()=>{
+ await app.whenReady();await wait(2000);
+ const ws=BrowserWindow.getAllWindows(),book=ws.find(w=>w.getTitle().endsWith('Book')),gallery=ws.find(w=>w.getTitle().endsWith('Vertical'));
+ const read=(w,c)=>w.webContents.executeJavaScript(c),action=a=>read(book,`window.exhibition.jewelsAction('${a}')`),state=()=>read(book,'window.exhibition.getSnapshot().then(s=>s.jewels)');
+ fs.mkdirSync('output/jewels',{recursive:true});
+ const shot=async n=>fs.writeFileSync(`output/jewels/${n}.png`,(await gallery.webContents.capturePage()).toPNG());
+ await action('start');await until('intro',async()=>(await state()).phase==='INTRO');
+ await action('left');assert.equal((await state()).phase,'INTRO');
+ await until('spread',async()=>(await state()).phase==='SPREAD');await shot('spread');
+ await until('ready',async()=>(await state()).phase==='READY');await wait(1000);await shot('ready');
+ assert.equal(await read(gallery,"document.querySelector('iframe').contentDocument.querySelectorAll('button').length"),0);
+ await action('left');await until('left settles',async()=>(await state()).phase==='READY');
+ assert.equal(await read(gallery,"document.querySelector('iframe').contentDocument.querySelector('.nm').textContent"),'Jewelled Shoulder Drapes');
+ await action('right');await until('right settles',async()=>(await state()).phase==='READY');
+ await action('reverse');await until('lower',async()=>(await state()).phase==='LOWER');await shot('gathered');
+ await until('complete',async()=>(await state()).phase==='COMPLETE');await shot('cleared');
+ await action('reset');await until('replay',async()=>(await state()).phase==='INTRO');
+ await action('reset');await until('second replay',async()=>(await state()).phase==='INTRO');
+ await action('exit');assert.equal((await state()).active,false);
+ await read(book,"window.exhibition.motifsAction('start')");
+ await until('Chapter 4 scroll ready',async()=>await read(book,"window.exhibition.getSnapshot().then(s=>s.motifs.phase==='SCROLL_READY')"));
+ await read(book,"window.exhibition.motifsAction('next')");
+ await until('Chapter 4 hands off to Chapter 5',async()=>(await state()).active);
+ await until('Chapter 5 ready after handoff',async()=>(await state()).phase==='READY');
+ assert.equal(await read(book,"window.exhibition.getSnapshot().then(s=>s.motifs.active)"),false);
+ console.log('PASS: entrance, Setup rotations, reverse, replay, exit, no audience buttons and Chapter 4 handoff');app.exit(0);
+})().catch(e=>{console.error(e);app.exit(1)});

@@ -1,0 +1,26 @@
+
+:root{--ink:#eef2f5;--mut:#9fb0be;--gold:#d9b779;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0;background:#04121c;overflow:hidden;font-family:'Jost',system-ui,sans-serif;color:var(--ink)}
+#root,#app{position:fixed;inset:0;background:radial-gradient(70% 55% at 50% 50%,#0d3047 0%,#07202f 55%,#030e17 100%)}
+#app::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 9px);pointer-events:none}
+canvas{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:pointer}#dust{pointer-events:none;cursor:default}
+.col{position:absolute;top:0;bottom:0;left:50%;width:min(100vw,56.25vh);transform:translateX(-50%);pointer-events:none}
+.fade{opacity:0;transform:translateY(8px);transition:opacity 1s,transform 1s}.on{opacity:1!important;transform:none!important}
+.hd{position:absolute;top:4.5vh;left:0;right:0;text-align:center}
+.kick{font-size:clamp(9px,1vh,20px);letter-spacing:.34em;color:var(--gold);text-transform:uppercase}
+h1{font:300 clamp(30px,min(5.4vh,9vw),100px)/1.1 'Newsreader',serif;margin:1.2vh 0 0}
+.rule{width:12%;height:1px;margin:1.6vh auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.pr{position:absolute;left:0;right:0;bottom:6vh;text-align:center;padding:0 10%}
+.pr h2{font:italic 300 clamp(18px,3vh,56px)/1.2 'Newsreader',serif;margin:0}
+.pr p{margin:1vh 0 0;font-size:clamp(10px,1.3vh,26px);color:var(--mut);letter-spacing:.04em}
+.row{position:absolute;left:4%;right:4%;height:8vh;transform:translateY(-50%);display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity .8s}
+.row.on{opacity:1}.row.r{padding-right:36%}.row.l{padding-left:36%}
+.row h4{margin:0 0 .4vh;font:500 clamp(11px,1.45vh,29px)/1.2 'Newsreader',serif}
+.row p{margin:0;font-size:clamp(9px,1.05vh,21px);line-height:1.4;color:var(--mut);font-weight:300}
+.btn{position:absolute;right:5%;bottom:3vh;pointer-events:auto;cursor:pointer;border:1px solid rgba(217,183,121,.6);background:rgba(4,18,28,.7);color:var(--ink);font:400 clamp(10px,1.2vh,24px) 'Jost',sans-serif;letter-spacing:.22em;text-transform:uppercase;padding:1.5vh 2.4vh;border-radius:40px;opacity:0;transition:opacity 1s,background .3s}
+.btn.on{opacity:1}.btn:hover{background:rgba(217,183,121,.25)}.btn.off{pointer-events:none}
+.pg{position:absolute;left:5%;bottom:3.6vh;font-size:clamp(9px,1.05vh,20px);color:var(--mut);letter-spacing:.2em}
+
+@font-face{font-family:Newsreader;src:url('../fashion/dress/cormorant.ttf');font-weight:300 500}@font-face{font-family:Jost;src:url('../fashion/dress/jost.ttf');font-weight:300 400}html,body,#root,#app{background:#521018!important;--mut:#dbc6ac;--ink:#f4ead6}.row.on{transform:translateY(-50%)!important}.btn,.pg,.pr{display:none!important}canvas{cursor:default}
+.hd h1{max-width:80%;margin-left:auto;margin-right:auto;font-size:clamp(30px,4.6vh,88px)} .final-list-heading{top:1.8vh} .final-list-heading h1{margin-top:.7vh}

@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "groups": [
+    "bowl",
+    "rice",
+    "saffron",
+    "protein",
+    "onions",
+    "herbs",
+    "spices"
+  ],
+  "assembled": {
+    "drawCalls": 8,
+    "triangles": 73042
+  },
+  "exploded": {
+    "drawCalls": 8,
+    "triangles": 73042
+  },
+  "rear": {
+    "drawCalls": 8,
+    "triangles": 73042
+  },
+  "triangles": 73042,
+  "materials": 2,
+  "textureBindings": 8,
+  "textures": [
+    {
+      "name": "Copper_BaseColor",
+      "width": 1024,
+      "height": 1024,
+      "channel": 0
+    },
+    {
+      "name": "Copper_Normal",
+      "width": 1024,
+      "height": 1024,
+      "channel": 0
+    },
+    {
+      "name": "Contact_AO-Copper_ORM",
+      "width": 1024,
+      "height": 1024,
+      "channel": 1
+    },
+    {
+      "name": "Contact_AO-Copper_ORM",
+      "width": 1024,
+      "height": 1024,
+      "channel": 0
+    },
+    {
+      "name": "Food_BaseColor",
+      "width": 1024,
+      "height": 1024,
+      "channel": 0
+    },
+    {
+      "name": "Food_Normal",
+      "width": 1024,
+      "height": 1024,
+      "channel": 0
+    },
+    {
+      "name": "Contact_AO-Food_ORM",
+      "width": 1024,
+      "height": 1024,
+      "channel": 1
+    },
+    {
+      "name": "Contact_AO-Food_ORM",
+      "width": 1024,
+      "height": 1024,
+      "channel": 0
+    }
+  ],
+  "size": [
+    3.042451246681112,
+    1.6017944883571886,
+    2.595538193914609
+  ],
+  "selectable": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "renderer": "WebKit WebGL",
+  "errors": []
+}

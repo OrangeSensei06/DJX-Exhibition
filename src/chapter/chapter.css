@@ -1,0 +1,152 @@
+.chapter-one { position: absolute; inset: 12px 3% 30px; opacity: 0; pointer-events: none; perspective: 1800px; }
+.chapter-one.is-active { opacity: 1; pointer-events: auto; }
+.book-spread { position: absolute; inset: 0; border: 1px solid #cccdc4; border-radius: 4px 13px 13px 4px; overflow: hidden; box-shadow: 0 4px 0 -1px #e4e4dd, 0 8px 0 -3px #d0d1c8, 0 18px 40px #20211f06; }
+.book-page { position: absolute; top: 0; bottom: 0; width: 50%; background: #fdfdf9; }
+.left-page { left: 0; }
+.right-page { right: 0; background: #fafbf6; }
+.book-spine { position: absolute; left: 50%; top: 0; bottom: 0; width: 28px; transform: translateX(-50%); z-index: 3; pointer-events: none; background: linear-gradient(90deg, transparent, #20211f05 20%, #20211f12 44%, #20211f25 49%, #ffffff80 51%, #20211f09 63%, transparent); }
+.biryani-intro { position: relative; height: 100%; width: 100%; padding: 9% 11% 40px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; color: #242620; }
+.chapter-kicker { font-family: Arial, sans-serif; font-size: 8px; line-height: 1.6; letter-spacing: 2px; color: var(--muted, #72736d); font-weight: 400; }
+.bowl-doodle { width: 62px; height: 56px; stroke: #55594c; stroke-width: 1.35; margin-top: auto; margin-bottom: 20px; transform: rotate(-7deg); }
+.biryani-intro h1 { font-size: clamp(56px, 7vw, 104px); letter-spacing: -5px; margin: 0 0 25px -4px; line-height: 1.05; }
+.hand-period { font-style: italic; }
+.biryani-hook { font-family: Georgia, serif; font-size: clamp(18px, 2.1vw, 29px); letter-spacing: -.5px; line-height: 1.4; margin: 0 0 24px; }
+.biryani-caption { font-size: 12px; line-height: 1.9; color: #717568; margin: 0; }
+.doodle-aside { align-self: flex-end; display: flex; flex-direction: column; margin-top: auto; padding-top: 24px; margin-bottom: auto; transform: rotate(-6deg); }
+.doodle-aside span, .handwritten { font-family: 'Segoe Print', 'Bradley Hand', Georgia, serif; font-size: 13px; font-style: italic; color: #727667; }
+.doodle-arrow { width: 110px; height: 45px; margin-left: 20px; stroke: #6e735f; stroke-width: 1.2; stroke-linecap: round; }
+.page-number { position: absolute; bottom: 22px; left: 10%; font-size: 8px; letter-spacing: 2px; color: #96988e; }
+.right-page .page-number { left: auto; right: 10%; }
+.right-page-kicker { position: absolute; top: 9%; left: 12%; right: 10%; font-size: 7px; line-height: 1.8; letter-spacing: 1.5px; color: #8b8f80; }
+.bowl-ground { position: absolute; width: 56%; left: 22%; top: 65%; height: 6%; border: 1px dashed #b4b9a050; border-radius: 50%; transform: rotate(-3deg); }
+.book-interaction-copy { position: absolute; bottom: 13%; left: 10%; right: 10%; text-align: center; }
+.book-interaction-copy p { font-size: 10px; line-height: 1.7; color: #858979; margin: 8px 0 0; }
+.biryani-scene { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+.biryani-scene > div { pointer-events: none; }
+.biryani-scene canvas { display: block; }
+.biryani-touch-zone { position: absolute; width: 36%; height: 40%; pointer-events: auto !important; touch-action: none; cursor: grab; z-index: 3; }
+.biryani-touch-zone:active { cursor: grabbing; }
+.model-loading, .model-error { position: absolute; top: 48%; left: 56%; width: 36%; font-size: 11px; line-height: 1.7; text-align: center; color: #7e8373; }
+.model-error { padding: 12px; background: #f7f7f4; color: #20211f; border: 1px solid #ccc; }
+.chapter-vertical .model-loading, .chapter-vertical .model-error { left: 15%; width: 70%; }
+
+.page-turn { position: absolute; left: 50%; width: 50%; top: 0; bottom: 0; transform-origin: left center; transform-style: preserve-3d; z-index: 6; pointer-events: none; animation-name: opening-leaf; animation-timing-function: cubic-bezier(.3,.05,.2,1); animation-fill-mode: both; }
+.leaf-front, .leaf-back { position: absolute; inset: 0; backface-visibility: hidden; background: #fcfcf8; border: 1px solid #d1d3c7; }
+.leaf-front { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; box-shadow: 15px 0 35px #0001; }
+.leaf-front::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #25281c08, transparent 20%); }
+.leaf-title { font-family: Georgia, serif; font-size: clamp(30px, 4vw, 60px); line-height: 1.1; text-align: center; letter-spacing: -2px; }
+.leaf-back { transform: rotateY(180deg); }
+@keyframes opening-leaf { 0% { transform: rotateY(0deg); } 45% { transform: rotateY(-85deg); } 100% { transform: rotateY(-180deg); } }
+
+.chapter-vertical { inset: 10px 28px 28px; border: 1px solid #ae884c70; overflow: hidden; background: radial-gradient(ellipse at 50% 43%, #102432 0%, #091824 55%, #07131e 100%); }
+.chapter-vertical .chapter-kicker { color: #b99b62; }
+.gallery-heading { position: absolute; z-index: 3; top: 5%; left: 5%; right: 5%; text-align: center; pointer-events: none; }
+.chapter-vertical .gallery-heading h1 { font-family: Georgia, serif; font-size: 45px; letter-spacing: -1.5px; font-weight: 400; margin: 12px 0 18px; line-height: 1; }
+.gallery-fine-rule { display: block; width: 32px; height: 1px; background: #8c9083; margin: auto; }
+.gallery-instruction { position: absolute; top: 38%; left: 7%; right: 7%; text-align: center; z-index: 3; pointer-events: none; }
+.gallery-instruction h2 { font-family: Georgia, serif; font-size: clamp(27px, 4vw, 41px); line-height: 1.15; letter-spacing: -1px; font-weight: 400; margin: 18px 0; }
+.gallery-instruction h2 em { font-weight: 400; }
+.gallery-instruction p { font-size: 11px; line-height: 1.9; color: #a6ad98; margin: 12px 0 0; }
+.gallery-instruction .handwritten { color: #a6ad98; }
+.lift-doodle { font-family: Georgia, serif; display: inline-block; font-size: 60px; font-weight: 400; color: #7e8870; transform: rotate(8deg); }
+.chapter-vertical:not([data-phase="book"]) .gallery-instruction { top: auto; bottom: 5%; }
+.chapter-vertical[data-phase="exploded"] .gallery-instruction h2 { font-size: 25px; margin-bottom: 10px; }
+.chapter-vertical[data-phase="exploded"] .gallery-instruction { bottom: 3%; }
+.chapter-vertical[data-phase="exploded"] .gallery-instruction p { font-size: 10px; }
+.chapter-vertical[data-phase="clearing"] .gallery-instruction, .chapter-vertical[data-phase="story"] .gallery-instruction { display: none; }
+.biryani-story { position: absolute; left: 12%; right: 12%; top: 22%; z-index: 3; text-align: left; pointer-events: none; }
+.biryani-story h2 { font-size: clamp(29px, 4vw, 44px); line-height: 1.12; letter-spacing: -1.5px; margin: 22px 0 25px; }
+.biryani-story p { font-family: Georgia, serif; font-size: 16px; line-height: 1.7; color: #c2c6b8; margin: 0 0 20px; }
+.story-line { opacity: 0; }
+.revealing .story-line { animation: story-reveal 1100ms cubic-bezier(.2,.65,.2,1) both; }
+.story-copy-placeholder { display: flex; flex-direction: column; gap: 13px; margin-top: 35px; }
+.story-copy-placeholder span { display: block; width: 100%; height: 1px; background: #8c947157; }
+.story-copy-placeholder span:nth-child(2) { width: 88%; }
+.story-copy-placeholder span:nth-child(3) { width: 67%; }
+@keyframes story-reveal { from { opacity: 0; transform: translateY(-12px); filter: blur(2px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
+.chapter-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.chapter-actions .control-button { line-height: 1.5; }
+
+.reconstruction-sheet { position: absolute; inset: 0; z-index: 5; pointer-events: auto; touch-action: none; color: #eee9dc; }
+.reconstruction-heading { position: absolute; top: 4%; left: 8%; right: 8%; text-align: center; }
+.reconstruction-heading h2 { max-width: 460px; margin: 12px auto 0; font-size: clamp(26px, 4.6vw, 41px); line-height: 1.08; letter-spacing: -1.4px; font-weight: 400; }
+.ingredient-notes { position: absolute; inset: 0; list-style: none; padding: 0; margin: 0; }
+.ingredient-note { position: absolute; display: flex; gap: 10px; width: 63%; transform: translateY(-50%); text-align: left; }
+.ingredient-note.note-left { left: 6%; }
+.ingredient-note.note-right { right: 5%; }
+.ingredient-bullet { flex: 0 0 10px; padding-top: 1px; color: #bc9b63; font-size: 16px; }
+.ingredient-note h3 { font-family: Georgia, serif; color: #ede7d7; font-size: 15px; line-height: 1.2; margin: 0 0 4px; font-weight: 400; }
+.ingredient-note p { color: #b9c2bd; font-size: 11px; line-height: 1.55; margin: 0; }
+.ingredient-note small { color: #8e9c94; font-size: 8px; display: block; margin-top: 3px; font-style: italic; }
+.ingredient-note.is-collected .ingredient-bullet { font-size: 12px; color: #bbc6a2; }
+.ingredient-note.is-collected h3 { color: #cbd4bd; }
+.ingredient-pickup { position: absolute; width: 24%; height: 7%; transform: translate(-50%, -50%); background: none; border: none; padding: 0; pointer-events: auto; touch-action: none; cursor: grab; color: #d0b17b; }
+.ingredient-pickup:active { cursor: grabbing; }
+.ingredient-pickup:focus-visible { outline: 1px dashed #d0b17b; outline-offset: 2px; border-radius: 50%; }
+.rebuild-drop-zone { position: absolute; left: 26%; right: 26%; top: 79%; bottom: 1%; border: 1px dashed transparent; border-radius: 50%; pointer-events: none; }
+.rebuild-drop-zone.is-ready { border-color: #bfa87655; }
+.rebuild-drop-zone.is-over { border-color: #d2dabb; background: #c5dba507; }
+.rebuild-cursor { position: absolute; width: 19px; height: 19px; border: 1px solid #e8e1cf; border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; box-shadow: 0 0 0 3px #e8e1cf12; }
+.rebuild-cursor.is-gripping { width: 12px; height: 12px; background: #e8e1cf66; }
+.rebuild-status { position: absolute; bottom: 1.5%; left: 5%; right: 5%; display: flex; justify-content: space-between; gap: 15px; font-size: 9px; line-height: 1.5; color: #d0c5ab; pointer-events: none; }
+.is-complete .story-line { opacity: 1; }
+.chapter-vertical[data-phase="story"] .gallery-instruction, .chapter-vertical[data-phase="complete"] .gallery-instruction { display: none; }
+.chapter-vertical[data-phase="story"] .biryani-scene, .chapter-vertical[data-phase="complete"] .biryani-scene { z-index: 4; }
+.reconstruction-sheet .story-line { animation-name: ingredient-reveal; }
+@keyframes ingredient-reveal { from { opacity: 0; translate: 0 -10px; } to { opacity: 1; translate: 0 0; } }
+@media (max-width: 440px) {
+  .ingredient-note { gap: 5px; width: 64%; }
+  .ingredient-note h3 { font-size: 12px; }
+  .ingredient-note p { font-size: 9px; line-height: 1.4; }
+  .reconstruction-heading h2 { font-size: 28px; }
+  .rebuild-status { font-size: 8px; }
+}
+@media (max-height: 760px) {
+  .reconstruction-heading h2 { font-size: 25px; margin-top: 6px; }
+  .ingredient-note h3 { font-size: 11px; margin-bottom: 2px; }
+  .ingredient-note p { font-size: 8.5px; line-height: 1.3; }
+  .ingredient-note small { font-size: 7px; margin-top: 1px; }
+  .ingredient-bullet { font-size: 12px; }
+  .rebuild-status { font-size: 8px; }
+}
+
+@media (max-width: 750px) {
+  .biryani-intro { padding-left: 10%; padding-right: 9%; }
+  .biryani-intro h1 { font-size: 54px; letter-spacing: -3px; }
+  .biryani-hook { font-size: 20px; }
+  .biryani-caption { font-size: 10px; }
+  .chapter-kicker { font-size: 7px; letter-spacing: 1px; }
+  .doodle-aside span { font-size: 10px; }
+  .doodle-arrow { width: 70px; height: 35px; }
+  .right-page-kicker { font-size: 6px; letter-spacing: 1px; }
+  .book-interaction-copy p { font-size: 8px; }
+  .book-interaction-copy .handwritten { font-size: 11px; }
+  .chapter-vertical .gallery-heading h1 { font-size: 39px; }
+}
+@media (max-height: 760px) {
+  .biryani-intro { padding-top: 7%; }
+  .bowl-doodle { width: 42px; height: 39px; margin-bottom: 12px; }
+  .biryani-intro h1 { font-size: 60px; margin-bottom: 14px; }
+  .biryani-hook { font-size: 22px; margin-bottom: 12px; }
+  .doodle-aside { padding-top: 12px; }
+  .gallery-heading { top: 4%; }
+  .chapter-vertical .gallery-heading h1 { font-size: 34px; margin: 8px 0 12px; }
+  .gallery-instruction h2 { font-size: 28px; }
+  .gallery-instruction p { font-size: 10px; }
+  .lift-doodle { font-size: 40px; }
+  .biryani-story { top: 24%; }
+  .biryani-story h2 { font-size: 31px; }
+  .biryani-story p { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .revealing .story-line { animation-duration: 100ms; filter: none; }
+}
+
+/* The final ingredient display is read-only; navigation appears above the story. */
+.reconstruction-sheet { pointer-events: none; }
+.reconstruction-heading { top: 7%; }
+.next-chapter-prompt { position: absolute; top: 1.5%; left: 5%; right: 5%; text-align: center; font-size: 10px; letter-spacing: .7px; color: #e7d2a7; animation: story-reveal 400ms ease both; }
+.next-chapter-prompt span { margin-right: 10px; font-size: 18px; vertical-align: -1px; }
+.is-leaving .ingredient-notes, .is-leaving .reconstruction-heading { opacity: 0; transition: opacity 350ms ease; }
+.is-leaving .story-line { opacity: 1; }
+.chapter-vertical[data-phase="reassembling"] .gallery-instruction { display: none; }

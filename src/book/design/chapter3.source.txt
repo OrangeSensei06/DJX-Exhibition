@@ -1,0 +1,225 @@
+const imgImage34 = "https://www.figma.com/api/mcp/asset/a206a9ab-fd5a-462d-83fa-0143bf640d9a.png";
+const imgImage30 = "https://www.figma.com/api/mcp/asset/47470276-7f76-4200-8bd3-a9dd4f143cf2.png";
+const imgBackground = "https://www.figma.com/api/mcp/asset/6a1fe2c8-d7fa-45ce-9731-3eff3de0d49e.svg";
+const imgSpine = "https://www.figma.com/api/mcp/asset/23190990-2c2a-40aa-81ec-7003bf16286d.svg";
+const imgArchMotif = "https://www.figma.com/api/mcp/asset/2e866ec2-464e-46a9-acd5-cbaffe83f000.svg";
+const imgRuleTitle = "https://www.figma.com/api/mcp/asset/a343dfce-c69f-4c70-b1dc-c40b1760b6f9.svg";
+const imgImageFrame = "https://www.figma.com/api/mcp/asset/3b637ace-6161-4d8c-bc98-69971171bda0.svg";
+const imgRuleIntro = "https://www.figma.com/api/mcp/asset/603d6945-0891-4601-8146-0af45608143b.svg";
+const imgTajMahal = "https://www.figma.com/api/mcp/asset/9c5f53cd-c62f-4e67-a1d6-01dc21653feb.svg";
+
+export default function Final() {
+  return (
+    <div className="bg-[#392f19] relative size-full" data-node-id="126:2589" data-name="FINAL">
+      <div className="absolute inset-[0.67%_0_-0.67%_0]" data-node-id="126:2590" data-name="Background">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBackground} />
+      </div>
+      <div className="absolute inset-[0_48.18%]" data-node-id="126:2599" data-name="Spine">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSpine} />
+      </div>
+      <div className="absolute flex inset-[3.75%_-9.32%_2.42%_85.89%] items-center justify-center" data-node-id="126:2600" style={{ containerType: "size" }}>
+        <div className="-rotate-90 flex-none h-[100cqw] w-[100cqh]">
+          <p className="[word-break:break-word] font-['Poppins:Bold'] leading-[normal] not-italic relative text-[300px] text-[rgba(255,255,255,0.18)] whitespace-nowrap">MOTIFS</p>
+        </div>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[12%_15.78%_79.67%_54.37%] leading-[100px] text-[#f3e6c8] text-[104px] whitespace-nowrap" data-node-id="126:2601">
+        BUILT FOR
+      </p>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[20.92%_13.02%_70.75%_54.37%] leading-[100px] text-[#f3e6c8] text-[104px] whitespace-nowrap" data-node-id="126:2602">
+        ETERNITY ?
+      </p>
+      <div className="absolute contents inset-[7.67%_11.3%_58.33%_51.82%]" data-node-id="126:2603" data-name="arch-pattern">
+        <div className="absolute inset-[7.67%_45.68%_86.33%_51.82%] opacity-20" data-node-id="126:2604" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[7.67%_41.09%_86.33%_56.41%] opacity-20" data-node-id="126:2608" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[7.67%_36.51%_86.33%_60.99%] opacity-20" data-node-id="126:2612" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[7.67%_31.93%_86.33%_65.57%] opacity-20" data-node-id="126:2616" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[7.67%_27.34%_86.33%_70.16%] opacity-20" data-node-id="126:2620" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[7.67%_22.76%_86.33%_74.74%] opacity-20" data-node-id="126:2624" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[7.67%_18.18%_86.33%_79.32%] opacity-20" data-node-id="126:2628" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[7.67%_13.59%_86.33%_83.91%] opacity-20" data-node-id="126:2632" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[14.67%_43.39%_79.33%_54.11%] opacity-20" data-node-id="126:2636" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[14.67%_38.8%_79.33%_58.7%] opacity-20" data-node-id="126:2640" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[14.67%_34.22%_79.33%_63.28%] opacity-20" data-node-id="126:2644" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[14.67%_29.64%_79.33%_67.86%] opacity-20" data-node-id="126:2648" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[14.67%_25.05%_79.33%_72.45%] opacity-20" data-node-id="126:2652" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[14.67%_20.47%_79.33%_77.03%] opacity-20" data-node-id="126:2656" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[14.67%_15.89%_79.33%_81.61%] opacity-20" data-node-id="126:2660" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[14.67%_11.3%_79.33%_86.2%] opacity-20" data-node-id="126:2664" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[21.67%_45.68%_72.33%_51.82%] opacity-20" data-node-id="126:2668" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[21.67%_41.09%_72.33%_56.41%] opacity-20" data-node-id="126:2672" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[21.67%_36.51%_72.33%_60.99%] opacity-20" data-node-id="126:2676" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[21.67%_31.93%_72.33%_65.57%] opacity-20" data-node-id="126:2680" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[21.67%_27.34%_72.33%_70.16%] opacity-20" data-node-id="126:2684" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[21.67%_22.76%_72.33%_74.74%] opacity-20" data-node-id="126:2688" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[21.67%_18.18%_72.33%_79.32%] opacity-20" data-node-id="126:2692" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[21.67%_13.59%_72.33%_83.91%] opacity-20" data-node-id="126:2696" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[28.67%_43.39%_65.33%_54.11%] opacity-20" data-node-id="126:2700" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[28.67%_38.8%_65.33%_58.7%] opacity-20" data-node-id="126:2704" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[28.67%_34.22%_65.33%_63.28%] opacity-20" data-node-id="126:2708" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[28.67%_29.64%_65.33%_67.86%] opacity-20" data-node-id="126:2712" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[28.67%_25.05%_65.33%_72.45%] opacity-20" data-node-id="126:2716" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[28.67%_20.47%_65.33%_77.03%] opacity-20" data-node-id="126:2720" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[28.67%_15.89%_65.33%_81.61%] opacity-20" data-node-id="126:2724" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[28.67%_11.3%_65.33%_86.2%] opacity-20" data-node-id="126:2728" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[35.67%_45.68%_58.33%_51.82%] opacity-20" data-node-id="126:2732" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[35.67%_41.09%_58.33%_56.41%] opacity-20" data-node-id="126:2736" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[35.67%_36.51%_58.33%_60.99%] opacity-20" data-node-id="126:2740" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[35.67%_31.93%_58.33%_65.57%] opacity-20" data-node-id="126:2744" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[35.67%_27.34%_58.33%_70.16%] opacity-20" data-node-id="126:2748" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[35.67%_22.76%_58.33%_74.74%] opacity-20" data-node-id="126:2752" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[35.67%_18.18%_58.33%_79.32%] opacity-20" data-node-id="126:2756" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+        <div className="absolute inset-[35.67%_13.59%_58.33%_83.91%] opacity-20" data-node-id="126:2760" data-name="arch-motif">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArchMotif} />
+        </div>
+      </div>
+      <div className="[word-break:break-word] absolute contents font-['Poppins:Regular'] inset-[89.82%_27.19%_5.35%_53.7%] leading-[normal] not-italic text-[#e9e4d8] text-[19px] whitespace-nowrap" data-node-id="126:2764">
+        <p className="absolute inset-[89.82%_29.22%_7.77%_53.7%]" data-node-id="126:2768">
+          From royal courts to your skyline —
+        </p>
+        <p className="absolute inset-[92.23%_27.19%_5.35%_53.7%]" data-node-id="126:2769">
+          Mughal design has stood for centuries.
+        </p>
+      </div>
+      <div className="[word-break:break-word] absolute contents font-['Poppins:Bold'] inset-[68.5%_21.51%_10.58%_53.7%] leading-[normal] not-italic text-[66px] whitespace-nowrap" data-node-id="126:3132">
+        <p className="absolute inset-[68.5%_21.51%_23.25%_53.7%] text-[#eadba8]" data-node-id="126:3133">
+          A royal vision,
+        </p>
+        <p className="absolute inset-[74.83%_29.74%_16.92%_53.7%] text-[#eadba8]" data-node-id="126:3134">
+          carved in
+        </p>
+        <p className="absolute inset-[81.17%_35.36%_10.58%_53.7%] text-[#efba43]" data-node-id="126:3135">
+          stone.
+        </p>
+      </div>
+      <div className="absolute contents inset-[3.42%_40.05%_1.42%_2.6%]" data-node-id="131:451" data-name="Left-Page">
+        <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[4.63%_86.51%_91.79%_2.6%] leading-[normal] text-[#e7d3b0] text-[32px] whitespace-nowrap" data-node-id="131:452">
+          CHAPTER 03
+        </p>
+        <div className="absolute inset-[30.67%_53.54%_69.33%_3.13%]" data-node-id="131:453" data-name="rule-title">
+          <div className="absolute inset-[-0.75px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgRuleTitle} />
+          </div>
+        </div>
+        <div className="-translate-y-1/2 absolute aspect-[437/745] left-[4.79%] right-[73.23%] top-[calc(50%+163.5px)]" data-node-id="131:454" data-name="image 34">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[141.06%] left-[-10.8%] max-w-none top-[-16.27%] w-[122.43%]" src={imgImage34} />
+          </div>
+        </div>
+        <div className="absolute inset-[32.67%_71.98%_5.5%_3.49%]" data-node-id="131:455" data-name="image-frame">
+          <div className="absolute inset-[-0.13%_-0.21%]">
+            <img alt="" className="block max-w-none size-full" src={imgImageFrame} />
+          </div>
+        </div>
+        <div className="absolute inset-[94.08%_53.33%_5.92%_29.9%]" data-node-id="131:456" data-name="rule-intro">
+          <div className="absolute inset-[-1px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgRuleIntro} />
+          </div>
+        </div>
+        <p className="[word-break:break-word] absolute font-['Poppins:Bold'] inset-[96.92%_95.99%_1.42%_3.13%] leading-[normal] not-italic text-[#d9bb78] text-[13px] whitespace-nowrap" data-node-id="131:457">
+          03
+        </p>
+        <p className="[word-break:break-word] absolute font-['Poppins:Bold'] inset-[3.42%_40.05%_94.92%_52.81%] leading-[normal] not-italic text-[#d9bb78] text-[13px] text-right whitespace-nowrap" data-node-id="131:458">
+          INDIA THROUGH TIME
+        </p>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[12.67%_72.5%_79.92%_3.7%] leading-[normal] text-[#f3e6c8] text-[66px] uppercase whitespace-nowrap" data-node-id="131:459">{`Beyond the `}</p>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[16.83%_70.63%_70.17%_3.49%] leading-[normal] text-[116px] text-white uppercase whitespace-nowrap" data-node-id="131:460">
+        Arches
+      </p>
+      <div className="absolute inset-[42.5%_54.7%_41.92%_29.38%]" data-node-id="131:461" data-name="taj-mahal">
+        <div className="absolute inset-[-0.43%_-0.26%]">
+          <img alt="" className="block max-w-none size-full" src={imgTajMahal} />
+        </div>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Cinzel:Bold'] font-bold inset-[84.08%_58.44%_8.75%_30.05%] leading-[normal] text-[#e7d3b0] text-[32px]" data-node-id="131:489">
+        Maldevta Stones
+      </p>
+      <p className="[word-break:break-word] absolute font-['Playfair_Display:Regular'] font-normal inset-[64%_53.85%_24%_29.84%] leading-[normal] text-[#ffc33e] text-[36px]" data-node-id="131:490">
+        From royal courts to architectural marvels
+      </p>
+      <div className="absolute aspect-[296/287] left-[72.34%] right-[7.24%] top-[390px]" data-node-id="126:2802" data-name="image 30">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <img alt="" className="absolute h-[183.4%] left-0 max-w-none top-[-0.24%] w-full" src={imgImage30} />
+        </div>
+      </div>
+    </div>
+  );
+}
