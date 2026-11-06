@@ -32,6 +32,8 @@ export class HandTracker {
     this.lastTs = 0;
     this.fps = 0;
     this.lastFrameAt = 0;
+    this.lastProcessedAt = 0;
+    this.lastRescueAt = -Infinity;
     this.tile = 0;
     this.rr = 0;
     this.crop = document.createElement('canvas');
@@ -124,6 +126,10 @@ export class HandTracker {
     const w = v.videoWidth;
     const h = v.videoHeight;
     if (!w || !h || v.readyState < 2 || v.currentTime === this.lastVideoTime) return;
+    // Bound inference to approximately 30 FPS even if the camera delivers more frames.
+    // This leaves CPU/GPU time for the exhibition scenes, particularly fullscreen.
+    if (performance.now() - this.lastProcessedAt < 32) return;
+    this.lastProcessedAt = performance.now();
     this.lastVideoTime = v.currentTime;
     const ar = w / h;
     const t0 = performance.now();
@@ -136,7 +142,12 @@ export class HandTracker {
     let hands = this.tm.update(dets, t0);
 
     // --- rescue / idle scan -------------------------------------------------
-    const plan = this.planCrop(t0, w, h, ar);
+    // The second MediaPipe model is expensive. Do not run crop rescue on every
+    // frame when tracking is lost or while scanning an empty scene.
+    const rescueInterval = this.tm.tracks.length ? 140 : 450;
+    const mayRescue = t0 - this.lastRescueAt >= rescueInterval;
+    const plan = mayRescue ? this.planCrop(t0, w, h, ar) : null;
+    if (plan) this.lastRescueAt = t0;
     if (plan) {
       const { sx, sy, side } = plan;
       this.cctx.drawImage(v, sx, sy, side, side, 0, 0, this.crop.width, this.crop.height);

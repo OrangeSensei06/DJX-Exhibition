@@ -47,6 +47,7 @@ export function useGestureCamera(role: WindowRole, snapshot: Snapshot) {
       let engine: GestureEngine | null = null;
       let engineKey = '';
       let lastReport = 0;
+      let lastOverlay = 0;
       const tracker = new HandTracker(videoRef.current, { ...CONFIG, camera: { ...CONFIG.camera, deviceId } }, frame => {
         if (!active()) return;
         const state = contextRef.current;
@@ -67,8 +68,13 @@ export function useGestureCamera(role: WindowRole, snapshot: Snapshot) {
         window.exhibition?.reportHands({ capturedAt: now, hands: hands.map(hand => ({
           id: String(hand.id), x: 1 - hand.landmarks[8].x, y: hand.landmarks[8].y, pinching: false,
         })) });
-        if (overlayRef.current?.offsetParent && videoRef.current) drawHandOverlay(overlayRef.current, videoRef.current,
-          hands.map((hand, index) => ({ label: index === 0 ? 'Left' : 'Right', landmarks: hand.landmarks })));
+        // Drawing the decorative skeleton does not contribute to recognition.
+        // Only draw while Tab preview is shown, capped at 12 FPS.
+        if (overlayRef.current?.closest('[data-preview-visible="true"]') && videoRef.current && frame.t - lastOverlay > 83) {
+          drawHandOverlay(overlayRef.current, videoRef.current,
+            hands.map((hand, index) => ({ label: index === 0 ? 'Left' : 'Right', landmarks: hand.landmarks })));
+          lastOverlay = frame.t;
+        }
         if (frame.t - lastReport >= 180) {
           report({ camera: 'ready', hand: hands.length ? 'visible' : 'none', hands: hands.length,
             fps: Math.round(frame.fps), backend: tracker.delegate, model: 'full', inferenceMs: Math.round(frame.ms),
