@@ -2,11 +2,12 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Snapshot, VisionStatus, WindowRole } from '../../shared/protocol';
 import { gestureContextKey, gestureHint } from '../../shared/gestureRouting';
 import { CONFIG, GestureEngine, HandTracker } from './gestureLab/index.js';
-import { drawHandOverlay } from './handOverlay';
 
-export function useGestureCamera(role: WindowRole, snapshot: Snapshot) {
+export function useGestureCamera(role: WindowRole, snapshot: Snapshot, previewVisible: boolean) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const overlayRef = useRef<HTMLCanvasElement>(null);
+  const previewWorker = useRef<Worker | null>(null);
+  const previewPending = useRef(false);
   const trackerRef = useRef<HandTracker | null>(null);
   const generation = useRef(0);
   const contextRef = useRef(snapshot);
@@ -19,8 +20,7 @@ export function useGestureCamera(role: WindowRole, snapshot: Snapshot) {
     trackerRef.current?.stop();
     trackerRef.current = null;
     if (videoRef.current) videoRef.current.srcObject = null;
-    const canvas = overlayRef.current;
-    canvas?.getContext('2d')?.clearRect(0, 0, canvas.width, canvas.height);
+    previewWorker.current?.postMessage({ type: 'frame', hands: [], videoWidth: 0, videoHeight: 0 });
     window.exhibition?.reportHands({ capturedAt: Date.now(), hands: [] });
     if (announce) report({ camera: 'off', hand: 'none', message: 'Camera off', fps: 0 });
   }, [report]);
@@ -47,7 +47,7 @@ export function useGestureCamera(role: WindowRole, snapshot: Snapshot) {
       let engine: GestureEngine | null = null;
       let engineKey = '';
       let lastReport = 0;
-      let lastOverlay = 0;
+      let lastHandsReport = 0;
       const tracker = new HandTracker(videoRef.current, { ...CONFIG, camera: { ...CONFIG.camera, deviceId } }, frame => {
         if (!active()) return;
         const state = contextRef.current;
@@ -65,15 +65,27 @@ export function useGestureCamera(role: WindowRole, snapshot: Snapshot) {
         // Predicted hands help recognition bridge dropouts; cursors and the
         // preview show only actual observations, never a stale pinch.
         const hands = frame.hands.filter(hand => !hand.coasting);
-        window.exhibition?.reportHands({ capturedAt: now, hands: hands.map(hand => ({
-          id: String(hand.id), x: 1 - hand.landmarks[8].x, y: hand.landmarks[8].y, pinching: false,
-        })) });
-        // Drawing the decorative skeleton does not contribute to recognition.
-        // Only draw while Tab preview is shown, capped at 12 FPS.
-        if (overlayRef.current?.closest('[data-preview-visible="true"]') && videoRef.current && frame.t - lastOverlay > 83) {
-          drawHandOverlay(overlayRef.current, videoRef.current,
-            hands.map((hand, index) => ({ label: index === 0 ? 'Left' : 'Right', landmarks: hand.landmarks })));
-          lastOverlay = frame.t;
+        // Cursor IPC is separate from recognition; a 15 FPS cursor update avoids
+        // flooding Electron and the vertical renderer while tracking runs at full speed.
+        if (frame.t - lastHandsReport >= 65) {
+          window.exhibition?.reportHands({ capturedAt: now, hands: hands.map(hand => ({
+            id: String(hand.id), x: 1 - hand.landmarks[8].x, y: hand.landmarks[8].y, pinching: false,
+          })) });
+          lastHandsReport = frame.t;
+        }
+        // Video plays at the camera's native FPS. The skeleton is rendered on
+        // its own worker at the REAL inference FPS, never an arbitrary 12 FPS cap.
+        const worker = previewWorker.current;
+        if (worker && !previewPending.current && videoRef.current) {
+          previewPending.current = true;
+          worker.postMessage({
+            type: 'frame', videoWidth: videoRef.current.videoWidth,
+            videoHeight: videoRef.current.videoHeight,
+            hands: hands.map((hand, index) => ({
+              label: index ? 'Right' : 'Left',
+              landmarks: hand.landmarks.map(p => ({ x: p.x, y: p.y })),
+            })),
+          });
         }
         if (frame.t - lastReport >= 180) {
           report({ camera: 'ready', hand: hands.length ? 'visible' : 'none', hands: hands.length,
@@ -91,6 +103,39 @@ export function useGestureCamera(role: WindowRole, snapshot: Snapshot) {
       void refreshDevices();
     } catch (error) { fail(error); }
   }, [deviceId, refreshDevices, report, role, stop]);
+  useEffect(() => {
+    if (role !== 'book' || !previewVisible || !overlayRef.current) return;
+    const canvas = overlayRef.current;
+    // OffscreenCanvas removes all landmark drawing from the tracking renderer.
+    // No worker exists at all while the Tab preview is closed.
+    if (typeof canvas.transferControlToOffscreen !== 'function') return;
+    const worker = new Worker(new URL('./previewOverlay.worker.ts', import.meta.url), { type: 'module' });
+    previewWorker.current = worker;
+    previewPending.current = false;
+    worker.onmessage = event => { if (event.data?.type === 'rendered') previewPending.current = false; };
+    worker.onerror = () => {
+      if (previewWorker.current === worker) previewWorker.current = null;
+      previewPending.current = false;
+      worker.terminate(); // Never let a preview error stop actual gesture detection.
+    };
+    const offscreen = canvas.transferControlToOffscreen();
+    worker.postMessage({ type: 'init', canvas: offscreen }, [offscreen]);
+    const resize = () => worker.postMessage({
+      type: 'resize',
+      width: canvas.clientWidth, height: canvas.clientHeight,
+      pixelRatio: window.devicePixelRatio || 1,
+    });
+    const observer = new ResizeObserver(resize);
+    observer.observe(canvas);
+    resize();
+    return () => {
+      observer.disconnect();
+      worker.terminate();
+      if (previewWorker.current === worker) previewWorker.current = null;
+      previewPending.current = false;
+    };
+  }, [role, previewVisible]);
+
   useEffect(() => {
     if (role !== 'book') return;
     void refreshDevices();

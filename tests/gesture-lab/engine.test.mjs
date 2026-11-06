@@ -120,7 +120,7 @@ for (const [label, ppm] of [['near (1 m)', 1.5], ['far (3 m)', 0.5]]) {
   });
 }
 
-for (const pose of ['edge', 'tilt', 'point']) {
+for (const pose of ['edge', 'tilt']) {
   for (const dir of [1, -1]) {
     test(`swipe ${dir > 0 ? 'right' : 'left'} with rotated hand (${pose}), far`, () => {
       const ppm = 0.6;
@@ -283,16 +283,39 @@ test('finger sweep right (pointing) is a finger gesture, not a swipe', () => {
   assert.deepEqual(r.names, ['finger-right']);
 });
 
-test('finger swirl clockwise => Finger Right, counter-clockwise => Finger Left', () => {
+test('circular pointing motion is no longer a jewellery command', () => {
   const ppm = 1.2;
-  const circle = (sign) =>
-    run(2200, (t) => {
-      const th = sign * Math.max(t - 300, 0) * 0.0045 + 0.3;
-      const R = 0.04;
-      return [{ pose: 'point', cx: 0.5 + toRawX(R * Math.cos(th), ppm), cy: 0.5 + R * Math.sin(th) * ppm, ppm }];
-    });
-  assert.equal(circle(+1).names[0], 'finger-right');
-  assert.equal(circle(-1).names[0], 'finger-left');
+  const r = run(2000, t => {
+    const th = Math.max(0, t - 300) * .0045;
+    return [{ pose: 'point', cx: 0.5 + toRawX(.04 * Math.cos(th), ppm),
+      cy: .5 + .04 * Math.sin(th) * ppm, ppm }];
+  });
+  assert.ok(!r.names.some(name => name.startsWith('finger-')), r.names.join(', '));
+});
+
+test('index finger sweep stays distinct from full-hand page swipe', () => {
+  const ppm = 1.2;
+  const index = run(1450, t => {
+    const u = Math.min(Math.max((t - 300) / 420, 0), 1);
+    return [{ pose: 'point', cx: .63 + toRawX(-.16 * ease(u), ppm), cy: .5, ppm }];
+  });
+  assert.deepEqual(index.names, ['finger-left']);
+  const palm = run(1450, t => {
+    const u = Math.min(Math.max((t - 300) / 230, 0), 1);
+    return [{ pose: 'open', cx: .63 + toRawX(-.32 * ease(u), ppm), cy: .5, ppm }];
+  });
+  assert.deepEqual(palm.names, ['swipe-left']);
+});
+
+test('longer brief motion-blur dropout keeps track identity and gesture continuity', () => {
+  const ppm = 1.2;
+  const r = run(1600, t => {
+    const u = Math.min(Math.max((t - 300) / 560, 0), 1);
+    if (t > 450 && t < 770) return null;
+    return [{ cx: .7 + toRawX(.38 * ease(u), ppm), cy: .5, ppm }];
+  });
+  assert.equal(r.ids.size, 1, 'reacquired hand should retain the track ID');
+  assert.ok(r.names.filter(name => name === 'swipe-right').length <= 1, r.names.join(', '));
 });
 
 console.log(`\n${passed} passed${process.exitCode ? ', with failures' : ''}`);

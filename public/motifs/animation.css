@@ -23,3 +23,15 @@ h1{font:400 clamp(32px,min(6.4vh,9.6vw),120px)/1.05 'Cormorant Garamond',serif;m
 
 .scr{background:rgba(255,245,217,.94);border:1px solid #b88e4f66;border-radius:12px;padding:28px 20px 18px;box-sizing:border-box;box-shadow:0 5px 22px #24160430}.scr.fly-text{overflow:visible}
 @font-face{font-family:'Cormorant Garamond';src:url('../fashion/dress/cormorant.ttf');font-weight:300 500}@font-face{font-family:Jost;src:url('../fashion/dress/jost.ttf');font-weight:300 400}.departing .ui>*{opacity:0!important;transition-delay:0s!important}canvas{transform:translateY(4vh) scaleY(.94);transform-origin:center}
+/* Keep the text entirely inside the parchment between the two scroll rollers.
+   The scene uses a 1080x1920 portrait canvas; override the old dynamic styles
+   so long historical copy cannot fall below the lower roller. */
+.scr{left:19.5%!important;top:16%!important;width:61%!important;height:64%!important;
+  max-height:64%!important;box-sizing:border-box;padding:22px 27px!important;
+  display:flex;flex-direction:column;justify-content:center;overflow:hidden!important;
+  font:400 27px/1.4 'Jost',sans-serif!important;text-align:center!important}
+.scr h3{font:500 37px/1.13 'Cormorant Garamond',serif!important;
+  margin:0 0 15px!important;flex:none;color:#7a1f2a}
+.scr p{font:400 26px/1.42 'Jost',sans-serif!important;margin:0!important;
+  overflow-wrap:break-word;hyphens:auto}
+.scr.fly-text{overflow:visible!important}

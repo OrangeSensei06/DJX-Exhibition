@@ -5,7 +5,7 @@
 //   - keeps coasting on a decaying-velocity prediction for `coastMs`,
 //   - keeps its scale estimate, so gesture windows can bridge the gap.
 
-const TAU = 0.12; // s, velocity decay while coasting
+const TAU = 0.20; // s: retain velocity a little longer through brief motion blur
 
 export class TrackManager {
   constructor(cfg) {
@@ -52,7 +52,11 @@ export class TrackManager {
       const p = this.predicted(tr, now);
       dets.forEach((d, j) => {
         const dist = Math.hypot(d.c.x - p.x, d.c.y - p.y);
-        const gate = Math.max(this.cfg.matchGate, 2.5 * Math.max(tr.hs, d.hs));
+        // When a hand is briefly lost, widen the gate gradually so its real
+        // reappearance can be associated with the predicted trajectory.
+        // This stays spatially bounded to avoid matching the other hand.
+        const missingFor = tr.missed > 0 ? Math.min((now - tr.t) / this.cfg.coastMs, 1) : 0;
+        const gate = Math.max(this.cfg.matchGate + 0.13 * missingFor, 2.5 * Math.max(tr.hs, d.hs));
         if (dist <= gate) pairs.push({ i, j, dist });
       });
     });
@@ -74,6 +78,9 @@ export class TrackManager {
   }
 
   apply(tr, d, now) {
+    // Expose one recovery marker to the gesture engine. It can then replace
+    // stale coast predictions with an interpolated observed-to-observed path.
+    tr.recoveredMs = tr.missed > 0 ? now - tr.t : 0;
     const dt = Math.min(Math.max((now - tr.t) / 1000, 0.008), 0.6);
     const vx = (d.c.x - tr.c.x) / dt;
     const vy = (d.c.y - tr.c.y) / dt;
@@ -95,7 +102,7 @@ export class TrackManager {
         if (!stale) break;
         this.tracks.splice(this.tracks.indexOf(stale), 1);
       }
-      this.tracks.push({ id: this.nextId++, c: d.c, t: now, vel: { x: 0, y: 0 }, ppm: d.ppm, hs: d.hs, missed: 0, det: d });
+      this.tracks.push({ id: this.nextId++, c: d.c, t: now, vel: { x: 0, y: 0 }, ppm: d.ppm, hs: d.hs, missed: 0, recoveredMs: 0, det: d });
     }
   }
 
@@ -116,7 +123,7 @@ export class TrackManager {
           landmarks = d.landmarks.map((p) => ({ x: p.x + ox / d.ar, y: p.y + oy, z: p.z }));
           tip = { x: d.tip.x + ox, y: d.tip.y + oy };
         }
-        return { id: tr.id, coasting, lostMs: now - tr.t, c, tip, ppm: tr.ppm, hs: tr.hs, pose: d.pose, landmarks, world: d.world };
+        return { id: tr.id, coasting, lostMs: now - tr.t, recoveredMs: coasting ? 0 : tr.recoveredMs || 0, c, tip, ppm: tr.ppm, hs: tr.hs, pose: d.pose, landmarks, world: d.world };
       });
   }
 }

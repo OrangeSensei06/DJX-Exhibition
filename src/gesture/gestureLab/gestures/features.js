@@ -72,7 +72,9 @@ export function analyzePose(wl, extendedRatio = 1.5) {
     middle,
     ring,
     pinky,
-    pointing: index && !middle && !ring,
+    // Permit one ambiguous non-index finger when the hand is slanted, but
+    // reject open palms, which remain reserved for page turning.
+    pointing: index && Number(middle) + Number(ring) + Number(pinky) <= 1,
     tm: d3(wl[4], wl[12]) / L, // thumb tip <-> middle tip (snap)
     mp: d3(wl[12], pc) / L, // middle tip <-> palm centre (snap)
   };

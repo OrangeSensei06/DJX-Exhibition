@@ -66,6 +66,23 @@ export class GestureEngine {
       let st = this.hs.get(h.id);
       if (!st) this.hs.set(h.id, (st = this.newState()));
       st.seen = now;
+      // On reacquisition, replace estimated coast samples with interpolation
+      // between the last and the new observed positions. Motion is reconstructed
+      // only AFTER detection; predicted samples never count as real observations.
+      if (!h.coasting && h.recoveredMs > 0) {
+        const previous = st.buf.findLast(sample => !sample.virtual);
+        if (previous && now > previous.t) {
+          const targetX = sgn * h.c.x;
+          for (const sample of st.buf) {
+            if (!sample.virtual || sample.t <= previous.t) continue;
+            const alpha = Math.min(1, Math.max(0, (sample.t - previous.t) / (now - previous.t)));
+            sample.x = previous.x + (targetX - previous.x) * alpha;
+            sample.y = previous.y + (h.c.y - previous.y) * alpha;
+            sample.ppm = previous.ppm + (h.ppm - previous.ppm) * alpha;
+            sample.lppm = Math.log(Math.max(1e-5, sample.ppm));
+          }
+        }
+      }
       st.buf.push({ t: now, x: sgn * h.c.x, y: h.c.y, ppm: h.ppm, lppm: Math.log(h.ppm), virtual: h.coasting });
       trim(st.buf, now, BUF_MS);
 
@@ -178,9 +195,9 @@ export class GestureEngine {
         speed = (ay / w.dt) * 1000;
       }
       if (!dir) continue;
-      // A finger-pointing pose normally means a finger gesture, but when the hand is
-      // rotated edge-on the pose is often misread, so a clearly fast stroke still counts.
-      if (st.pointing && speed < sw.pointingMinSpeed) continue;
+      // A sustained pointing pose is reserved for jewellery. A full-hand
+      // horizontal swipe turns pages; do not let one gesture do both.
+      if (st.pointing && dir !== 'up') continue;
       if (st.hold === dir) return; // same stroke still in progress
       if (OPPOSITE[dir] && st.lastSwipeDir === OPPOSITE[dir]) {
         // Right after a swipe the hand comes back the other way. That recovery is
@@ -234,37 +251,8 @@ export class GestureEngine {
       this.emit(`finger-${dir}`, detail, now);
     };
 
-    // swirl: accumulated angle of the fingertip around its own path centre
-    const seg = buf.filter((s) => s.t >= now - f.swirlWindow);
-    if (seg.length >= 8) {
-      const ppm = sum(seg.map((s) => s.ppm)) / seg.length;
-      const pts = seg.map((s) => ({ x: s.tx / ppm, y: s.ty / ppm }));
-      const cx = sum(pts.map((p) => p.x)) / pts.length;
-      const cy = sum(pts.map((p) => p.y)) / pts.length;
-      const rs = pts.map((p) => Math.hypot(p.x - cx, p.y - cy));
-      const R = sum(rs) / rs.length;
-      if (R >= f.minRadius && R <= f.maxRadius && Math.min(...rs) > 0.35 * R) {
-        let total = 0;
-        let pos = 0;
-        let neg = 0;
-        let prev = Math.atan2(pts[0].y - cy, pts[0].x - cx);
-        for (let i = 1; i < pts.length; i++) {
-          const a = Math.atan2(pts[i].y - cy, pts[i].x - cx);
-          let d = a - prev;
-          while (d > Math.PI) d -= 2 * Math.PI;
-          while (d <= -Math.PI) d += 2 * Math.PI;
-          total += d;
-          if (d > 0) pos++;
-          else if (d < 0) neg++;
-          prev = a;
-        }
-        if (Math.abs(total) >= f.swirlAngle && Math.max(pos, neg) / Math.max(pos + neg, 1) >= 0.75) {
-          // y points down on screen, so positive angle = clockwise as the user sees it
-          return fire(total > 0 ? 'right' : 'left', `swirl ${total > 0 ? 'clockwise' : 'counter-clockwise'}`);
-        }
-      }
-    }
-
+    // The jewellery interaction is a deliberate straight index-finger movement.
+    // Circular swirls are intentionally NOT recognized, unlike earlier editions.
     // sweep: fingertip travels in a mostly straight horizontal line
     for (const ms of f.sweepWindows) {
       const s = buf.filter((p) => p.t >= now - ms);
@@ -272,7 +260,7 @@ export class GestureEngine {
       const a = s[0];
       const b = s[s.length - 1];
       const dt = b.t - a.t;
-      if (dt < 100) continue;
+      if (dt < 140) continue;
       const ppm = sum(s.map((p) => p.ppm)) / s.length;
       const dx = (b.tx - a.tx) / ppm;
       const dy = (b.ty - a.ty) / ppm;
@@ -280,7 +268,7 @@ export class GestureEngine {
       for (let i = 1; i < s.length; i++) path += Math.hypot(s[i].tx - s[i - 1].tx, s[i].ty - s[i - 1].ty) / ppm;
       const ax = Math.abs(dx);
       if (ax >= f.sweepDist && ax >= f.dominance * Math.abs(dy) && (ax / dt) * 1000 >= f.sweepSpeed && ax / path >= f.straight) {
-        return fire(dx > 0 ? 'right' : 'left', `sweep ${ax.toFixed(2)} m`);
+        return fire(dx > 0 ? 'right' : 'left', `index-sweep ${ax.toFixed(2)} m`);
       }
     }
   }

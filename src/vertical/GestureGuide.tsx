@@ -10,6 +10,6 @@ export function GestureGuide({snapshot:s,now}:{snapshot:Snapshot;now:number}){
  else if(chapter===2){icon='snap';text='SNAP TO CHANGE'}
  else if(chapter===3){icon='push';text='PUSH WITH BOTH HANDS'}
  else if(chapter===4&&s.motifs.phase!=='SCROLL_READY')return null;
- else if(chapter===5){icon='finger';text='MOVE FINGER FROM RIGHT TO LEFT'}
+ else if(chapter===5){icon='finger';text='POINT INDEX FINGER · MOVE LEFT / RIGHT'}
  return <aside key={`${chapter}-${icon}-${text}`} className={`figma-gesture-guide guide-${chapter}`} data-biryani-stage={chapter===1?s.biryaniVideo.phase:undefined} data-gesture-icon={icon} aria-live="polite"><img className="guide-rule" src="./gestures/rule.svg" alt=""/><span className={`guide-icon icon-${icon}`}><AnimatedGestureHint name={icon}/></span><strong>{text}</strong><img className="guide-rule" src="./gestures/rule.svg" alt=""/></aside>
 }

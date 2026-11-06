@@ -63,9 +63,9 @@ export function routeGesture(s: Snapshot, event: LabGesture, now: number): Gestu
     case 4:
       return event.name === 'vertical-opposite' && s.motifs.phase === 'SCROLL_READY' ? { channel: 'motifs', action: 'open' } : null;
     default:
-      // The source engine also emits finger-left/right for straight sweeps;
-      // this chapter deliberately accepts circular swirls only.
-      return s.jewels.phase === 'READY' && event.detail.startsWith('swirl ') && (event.name === 'finger-left' || event.name === 'finger-right') ? { channel: 'jewels', action: event.name === 'finger-left' ? 'left' : 'right' } : null;
+      // Distinct index-only straight sweeps control the jewellery carousel.
+      // A full-hand page swipe remains a different gesture.
+      return s.jewels.phase === 'READY' && event.detail.startsWith('index-sweep ') && (event.name === 'finger-left' || event.name === 'finger-right') ? { channel: 'jewels', action: event.name === 'finger-left' ? 'left' : 'right' } : null;
   }
 }
 export function gestureHint(s: Snapshot, now: number) {
@@ -79,6 +79,6 @@ export function gestureHint(s: Snapshot, now: number) {
     case 2: return now < s.fashion.startedAt + 4700 || now < s.fashion.switchedAt + 900 || s.fashion.exitingAt ? 'Wait for the dress reveal…' : 'Snap to change dresses' + reverse;
     case 3: return s.architecture.phase === 'idle' ? 'Push both hands forward to enter the doors' + reverse : s.architecture.phase === 'inside' ? 'Push both hands forward to go back' : 'Wait for the doorway animation…';
     case 4: return s.motifs.phase === 'SCROLL_READY' ? 'Move hands vertically in opposite directions to open the scroll' : reverse ? 'Swipe left / right to reverse and turn the page' : 'Wait for the scroll animation…';
-    default: return s.jewels.phase === 'READY' ? 'Swirl one pointing finger left / right to rotate the jewellery' + reverse : 'Wait for the jewellery animation…';
+    default: return s.jewels.phase === 'READY' ? 'Point one index finger and move it left / right to rotate jewellery' + reverse : 'Wait for the jewellery animation…';
   }
 }

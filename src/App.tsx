@@ -49,9 +49,9 @@ export function App() {
   const [setup, setSetup] = useState(false);
   const [previewOpen, setPreviewOpen] = useState(false);
   const [error, setError] = useState('');
-  const camera = useGestureCamera(role, snapshot);
-  const audio = useExhibitionAudio(role, snapshot);
   const previewVisible = role === 'book' && (previewOpen || setup);
+  const camera = useGestureCamera(role, snapshot, previewVisible);
+  const audio = useExhibitionAudio(role, snapshot);
   const native = !!window.exhibition;
   const { page, gestureCount, lastInput, lastDirection } = snapshot.experience;
   const cameraOn = snapshot.vision.camera === 'ready' || snapshot.vision.camera === 'starting';

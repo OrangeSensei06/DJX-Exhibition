@@ -69,13 +69,14 @@ test('scroll opens with opposite vertical motion; navigation cannot skip opening
   s.motifs.phase='SCROLL_OPEN';assert.equal(fire(s,'swipe-left'),null);
   s.motifs.phase='CONTENT_VISIBLE';assert.ok(fire(s,'swipe-left'));
 });
-test('jewellery accepts both swirls, rejects straight finger sweeps and locks while rotating',()=>{
+test('jewellery accepts deliberate index-finger sweeps, not swirls, and locks while rotating',()=>{
   const s=state(5);s.handoff.phase='away';s.jewels.phase='READY';
-  assert.equal(fire(s,'finger-left','sweep 0.13 m'),null);
-  assert.deepEqual(fire(s,'finger-left','swirl counter-clockwise'),{channel:'jewels',action:'left'});
-  assert.deepEqual(fire(s,'finger-right','swirl clockwise'),{channel:'jewels',action:'right'});
+  assert.equal(fire(s,'finger-left','swirl counter-clockwise'),null);
+  assert.equal(fire(s,'finger-right','sweep 0.13 m'),null);
+  assert.deepEqual(fire(s,'finger-left','index-sweep 0.13 m'),{channel:'jewels',action:'left'});
+  assert.deepEqual(fire(s,'finger-right','index-sweep 0.14 m'),{channel:'jewels',action:'right'});
   assert.equal(canTurnPage(s,20000),false);
-  s.interaction.completed=true;s.jewels.phase='ROTATING';assert.equal(fire(s,'finger-left','swirl counter-clockwise'),null);
+  s.interaction.completed=true;s.jewels.phase='ROTATING';assert.equal(fire(s,'finger-left','index-sweep 0.13 m'),null);
   assert.equal(canTurnPage(s,20000),false);s.jewels.phase='READY';assert.equal(canTurnPage(s,20000),true);
 });
 test('automatic mode, page-turn settling, and handoff block input; context keys ignore vision broadcasts',()=>{

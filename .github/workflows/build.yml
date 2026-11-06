@@ -1,0 +1,41 @@
+name: Build and test DJX Exhibition
+on:
+  push:
+    branches:
+      - main
+      - 'verify/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-build:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run automated tests and produce Windows-ready renderer and Electron bundles
+        run: npm run check
+      - name: Verify launch bundles
+        shell: pwsh
+        run: |
+          if (!(Test-Path dist/index.html)) { throw "Missing dist/index.html" }
+          if (!(Test-Path dist-electron/electron/main.js)) { throw "Missing Electron entry" }
+          if (!(Test-Path dist/assets)) { throw "Missing Vite assets" }
+      - name: Publish verified build outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: djx-exhibition-windows-build
+          path: |
+            dist/
+            dist-electron/
+            launch.cmd
+            Launch Mughal Times.cmd
+          retention-days: 14

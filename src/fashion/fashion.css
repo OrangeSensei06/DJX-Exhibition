@@ -150,3 +150,17 @@
 @media(prefers-reduced-motion:reduce){.dress-atmosphere i{animation:none;opacity:.3}}
 
 .vertical .dress-chapter{top:118px}.vertical .dress-title-text{top:180px}.vertical .dress-title-divider{top:406px}.vertical .dress-subtitle{top:450px}
+
+/* Chapter 02: establish one editorial text scale and safe margins for both
+   the red and ivory looks. Preserve the figure and fabric artwork positions. */
+.dress-intro{left:66px;top:615px;width:455px;max-height:305px;overflow:hidden}
+.dress-intro p,.dress-description p{
+  font:400 29px/1.39 'Jost',sans-serif!important;
+  letter-spacing:0;overflow-wrap:break-word;
+}
+.dress-description{left:662px;top:1106px;width:356px;max-height:478px;overflow:visible}
+.dress-copy-divider{left:0;top:-46px}
+.look-white .dress-description{top:1106px}
+.dress-chapter,.dress-subtitle,.dress-title-text{text-wrap:balance}
+.dress-subtitle{left:127px;width:826px}
+.dress-title-text{max-width:900px}

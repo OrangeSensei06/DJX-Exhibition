@@ -11,19 +11,19 @@ export const CONFIG = {
 
   // Low confidences keep hands alive during fast motion / odd angles. The tracker
   // below filters out the false positives this lets in.
-  model: { minDetect: 0.3, minPresence: 0.3, minTrack: 0.3, delegate: 'GPU' },
+  model: { minDetect: 0.22, minPresence: 0.22, minTrack: 0.24, delegate: 'GPU' },
 
   tracker: {
     maxHands: 2,
-    coastMs: 350, // keep a lost hand alive (and predicted) this long
-    matchGate: 0.22, // min re-association distance, in frame heights
+    coastMs: 560, // survive a brief blurred or edge-on hand (not displayed as real)
+    matchGate: 0.28, // initial re-association gate; tracker widens it during a dropout
     ppmAlpha: 0.45, // smoothing of the hand-scale estimate
   },
 
   // Zoomed second-chance detection around hands that just vanished (and tile scan when idle).
   rescue: { enabled: true, idleScan: true },
 
-  pose: { extended: 1.5 }, // tip-to-wrist / mcp-to-wrist ratio to call a finger extended
+  pose: { extended: 1.45 }, // tip-to-wrist / mcp-to-wrist ratio to call a finger extended
 
   swipe: {
     minDist: 0.2,
@@ -63,9 +63,9 @@ export const CONFIG = {
 
   finger: {
     sweepWindows: [250, 400],
-    sweepDist: 0.1,
-    sweepSpeed: 0.22,
-    maxSpeed: 1.0, // m/s
+    sweepDist: 0.085,
+    sweepSpeed: 0.20,
+    maxSpeed: 1.05, // m/s; whole-hand strokes are faster
     dominance: 2,
     straight: 0.75,
     swirlWindow: 1100,
