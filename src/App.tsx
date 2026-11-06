@@ -140,7 +140,7 @@ export function App() {
     {role === 'book' && <div className={`camera-preview ${previewVisible ? 'camera-preview-visible' : 'camera-preview-parked'}`} data-preview-visible={previewVisible}>
       <video ref={camera.videoRef} muted playsInline autoPlay aria-label="Mirrored hand tracking camera" />
       {previewVisible && <canvas ref={camera.overlayRef} className="hand-tracking-overlay" aria-hidden="true" />}
-      {previewVisible && <span>{cameraOn ? `MIRRORED PREVIEW · ${snapshot.vision.hands ?? 0} / 2 HANDS` : 'CAMERA OFF · ENABLE IN SETUP'}</span>}
+      {previewVisible && <span>{cameraOn ? `TRACKING · ${snapshot.vision.hands ?? 0}/2 HANDS · ${snapshot.vision.fps ?? 0} FPS · ${snapshot.vision.inferenceMs ?? 0} MS` : 'CAMERA OFF · ENABLE IN SETUP'}</span>}
     </div>}
 
     <aside id="setup-panel" className="setup-panel" hidden={!setup} aria-label="Exhibition setup">
