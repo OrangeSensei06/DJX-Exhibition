@@ -7,7 +7,7 @@ export const CONFIG = {
   // USER's point of view: "Swipe Right" = the user's right hand side.
   mirror: true,
 
-  camera: { width: 1280, height: 720, fps: 60, portrait: false },
+  camera: { width: 960, height: 540, fps: 30, portrait: false },
 
   // Low confidences keep hands alive during fast motion / odd angles. The tracker
   // below filters out the false positives this lets in.

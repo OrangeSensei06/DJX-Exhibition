@@ -17,6 +17,9 @@ mkdirSync(runtimeRoot, { recursive: true });
 app.setPath('userData', runtimeRoot);
 app.setPath('sessionData', join(runtimeRoot, 'session'));
 app.setName('Mughal Times');
+// This is a dedicated local exhibition, not a browsing session: begin its
+// low-volume ambience immediately, without waiting for a mouse click.
+app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
 protocol.registerSchemesAsPrivileged([{
   scheme: 'mughal',
   privileges: { standard: true, secure: true, supportFetchAPI: true, corsEnabled: true, stream: true },

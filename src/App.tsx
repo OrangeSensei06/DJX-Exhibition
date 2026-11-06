@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { initialExperience, initialSurfaces, initialVision } from '../shared/protocol';
 import type { Snapshot, WindowRole } from '../shared/protocol';
 import { useGestureCamera } from './gesture/useGestureCamera';
+import { useExhibitionAudio } from './audio/useExhibitionAudio';
 // Legacy 3D chapter retained in src/chapter/ChapterOne.tsx; disabled for the video edition.
 // import { ChapterOne } from './chapter/ChapterOne';
 import {BiryaniScene as BiryaniVideoChapter,BiryaniSceneControls as BiryaniVideoControls} from './chapter/BiryaniScene';
@@ -46,8 +47,11 @@ export function App() {
   const [snapshot, setSnapshot] = useState<Snapshot>(previewSnapshot);
   useAutoSequence(role,snapshot.auto);
   const [setup, setSetup] = useState(false);
+  const [previewOpen, setPreviewOpen] = useState(false);
   const [error, setError] = useState('');
   const camera = useGestureCamera(role, snapshot);
+  const audio = useExhibitionAudio(role, snapshot);
+  const previewVisible = role === 'book' && (previewOpen || setup);
   const native = !!window.exhibition;
   const { page, gestureCount, lastInput, lastDirection } = snapshot.experience;
   const cameraOn = snapshot.vision.camera === 'ready' || snapshot.vision.camera === 'starting';
@@ -67,6 +71,11 @@ export function App() {
     const handler = (event: KeyboardEvent) => {
       if (event.target instanceof HTMLElement && event.target.closest('input, select, textarea, button')) return;
       if (event.repeat || event.ctrlKey || event.altKey || event.metaKey) return;
+      if (role === 'book' && event.key === 'Tab' && !setup) {
+        event.preventDefault();
+        setPreviewOpen(open => !open);
+        return;
+      }
       const api = window.exhibition;
       if (role === 'book' && ['ArrowRight','PageDown','ArrowLeft','PageUp'].includes(event.key)) {
         event.preventDefault();run(api?.navigate(['ArrowLeft','PageUp'].includes(event.key)?'previous':'next','keyboard'));return;
@@ -87,7 +96,7 @@ export function App() {
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [snapshot.fullscreen, snapshot.architecture.active, snapshot.motifs.active]);
+  }, [snapshot.fullscreen, snapshot.architecture.active, snapshot.motifs.active, setup]);
 
   useEffect(()=>{if(snapshot.fullscreen[role])setSetup(false)},[snapshot.fullscreen[role]]);
 
@@ -123,9 +132,16 @@ export function App() {
       <div className="status-copy" role="status"><span className={`status-dot ${snapshot.vision.camera === 'ready' ? 'ready' : ''}`} /><span>{native ? snapshot.vision.message : 'Desktop preview · launch the app for camera input'}</span></div>
       <div className="footer-actions">
         {role === 'book' && <button className="quiet-button" disabled={!native || snapshot.vision.camera === 'starting'} onClick={() => cameraOn ? camera.stop() : void camera.start()}>{cameraOn ? snapshot.vision.camera === 'starting' ? 'Starting…' : 'Stop camera' : 'Enable camera'}</button>}
+        {role === 'book' && <button className="quiet-button" aria-pressed={previewOpen} onClick={() => setPreviewOpen(open => !open)}>{previewOpen ? 'Hide preview' : 'Camera preview'} <kbd>Tab</kbd></button>}
         <button className="quiet-button" aria-expanded={setup} aria-controls="setup-panel" onClick={() => setSetup((value) => !value)}>{setup ? 'Close setup' : 'Setup'}<span aria-hidden="true">{setup ? '−' : '+'}</span></button>
       </div>
     </footer>
+
+    {role === 'book' && <div className={`camera-preview ${previewVisible ? 'camera-preview-visible' : 'camera-preview-parked'}`} data-preview-visible={previewVisible}>
+      <video ref={camera.videoRef} muted playsInline autoPlay aria-label="Mirrored hand tracking camera" />
+      {previewVisible && <canvas ref={camera.overlayRef} className="hand-tracking-overlay" aria-hidden="true" />}
+      {previewVisible && <span>{cameraOn ? `MIRRORED PREVIEW · ${snapshot.vision.hands ?? 0} / 2 HANDS` : 'CAMERA OFF · ENABLE IN SETUP'}</span>}
+    </div>}
 
     <aside id="setup-panel" className="setup-panel" hidden={!setup} aria-label="Exhibition setup">
       <div className="setup-heading"><div><span className="eyebrow">OPERATOR CONTROLS</span><h2>Application setup</h2></div><button className="close-button" aria-label="Close setup" onClick={() => setSetup(false)}>×</button></div>
@@ -147,10 +163,15 @@ export function App() {
       {role === 'book' && <section className="setup-section"><h3>Camera</h3>
         <label className="field"><span>Video input</span><select value={camera.deviceId} onChange={(event) => { camera.stop(); camera.setDeviceId(event.target.value); }}><option value="">Default camera</option>{camera.devices.map((device, index) => <option key={device.deviceId || index} value={device.deviceId}>{device.label || `Camera ${index + 1}`}</option>)}</select></label>
         <button className="control-button" disabled={!native || snapshot.vision.camera === 'starting'} onClick={() => cameraOn ? camera.stop() : void camera.start()}>{cameraOn ? snapshot.vision.camera === 'starting' ? 'Starting…' : 'Stop camera' : 'Enable camera'}</button>
-        <div className="camera-preview"><video ref={camera.videoRef} muted playsInline autoPlay aria-label="Mirrored camera preview" /><canvas ref={camera.overlayRef} className="hand-tracking-overlay" aria-hidden="true" /><span>{cameraOn ? `MIRRORED PREVIEW · ${snapshot.vision.hands ?? 0} / 2 HANDS` : 'CAMERA OFF'}</span></div>
+        <p className="setup-note">Press Tab in the book window to toggle the mirrored hand-tracking preview at the bottom right. The preview rendering is disabled while hidden; tracking continues.</p>
         <p className="setup-note">Live dots and lines show tracked fingers. Cyan and amber distinguish the two hands. No outline means the hand is not currently tracked.</p>
         <p className="setup-note">Swipe left / right to browse. Swipe up once to lift a chapter; page turns then wait for its reversal prompt. Biryani: opposite vertical, then hands apart. Dresses: snap. Doors: push to enter and push to return. Scroll: opposite vertical. Jewels: pointing-finger swirl. Video stays on this laptop.</p>
       </section>}
+      <section className="setup-section"><h3>Exhibition audio</h3>
+        <label className="field"><span>Ambient music · {audio.ambienceVolume}%</span><input type="range" min={0} max={100} step={1} value={audio.ambienceVolume} onChange={event => audio.setAmbienceVolume(Number(event.target.value))} aria-label="Ambient music volume" /></label>
+        <label className="field"><span>Interaction effects · {audio.effectsVolume}%</span><input type="range" min={0} max={100} step={1} value={audio.effectsVolume} onChange={event => audio.setEffectsVolume(Number(event.target.value))} aria-label="Sound effects volume" /></label>
+        <p className="setup-note">Volumes persist between launches and sync across both windows. Audio is played only by the Book window.</p>
+      </section>
       <AutoControls state={snapshot.auto}/>
       <BiryaniVideoControls state={snapshot.biryaniVideo} active={snapshot.fashion.nextChapter}/>
       <FashionControls state={snapshot.fashion} />

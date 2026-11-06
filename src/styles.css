@@ -156,3 +156,16 @@ h3 { font-size: 11px; font-weight: 500; margin: 0 0 16px; }
 .experience.exhibition-fullscreen>.main-stage,.experience.vertical.exhibition-fullscreen>.main-stage{width:100vw;height:100vh;inset:0;left:0;top:0;transform:none}
 
 .animated-gesture{display:inline-block;width:100px;height:100px;flex:none;vertical-align:middle}.animated-gesture>svg{display:block;width:100%;height:100%}.guide-icon .animated-gesture{width:100px;height:100px}.guide-icon.icon-page{padding-right:0}.pre-gesture .animated-gesture{width:100px;height:100px}.start-gesture .animated-gesture{width:100px;height:100px}.figma-gesture-guide.guide-3 .animated-gesture{height:64px}
+
+/* On-demand camera diagnostic. Keep the single tracking video at 2px when hidden:
+   requestVideoFrameCallback stays alive, but no full-size video/overlay is painted. */
+.experience .camera-preview{position:fixed;aspect-ratio:4/3;overflow:hidden;background:#121516;z-index:60}
+.experience .camera-preview-visible{bottom:16px;right:16px;width:min(320px,32vw);height:auto;aspect-ratio:4/3;border:1px solid #d6bd87;box-shadow:0 8px 32px #0009;pointer-events:none}
+.experience .camera-preview-parked{left:0;bottom:0;width:2px;height:2px;opacity:.01;pointer-events:none;z-index:-1}
+.experience .camera-preview video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1);display:block}
+.experience .camera-preview .hand-tracking-overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.experience .camera-preview span{position:absolute;bottom:9px;left:9px;background:#fcfcf9e8;color:#20211f;font-size:8px;letter-spacing:.6px;padding:5px 7px}
+.experience.operator-open .camera-preview-visible{right:min(450px,42vw)}
+.experience .footer-actions kbd{font:inherit;border:1px solid currentColor;border-radius:3px;padding:1px 4px;opacity:.7}
+.experience .setup-section input[type="range"]{width:100%;accent-color:#8b573e;cursor:pointer}
+@media(max-width:820px){.experience .camera-preview-visible{width:min(260px,39vw)}.experience.operator-open .camera-preview-visible{right:16px;bottom:auto;top:16px}}
