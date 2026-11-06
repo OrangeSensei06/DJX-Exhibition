@@ -315,7 +315,7 @@ test('longer brief motion-blur dropout keeps track identity and gesture continui
     return [{ cx: .7 + toRawX(.38 * ease(u), ppm), cy: .5, ppm }];
   });
   assert.equal(r.ids.size, 1, 'reacquired hand should retain the track ID');
-  assert.ok(r.names.filter(name => name === 'swipe-right').length <= 1, r.names.join(', '));
+  assert.deepEqual(r.names, ['swipe-right'], 'motion across the brief gap should complete a single gesture');
 });
 
 console.log(`\n${passed} passed${process.exitCode ? ', with failures' : ''}`);
