@@ -1,5 +1,6 @@
 // Presentation-only drawing worker. It never touches camera capture or gesture
 // recognition, and exists only while the operator has the Tab preview open.
+export {}; // Worker module scope, independent from DOM globals.
 type Point = { x: number; y: number };
 type PreviewHand = { label: string; landmarks: Point[] };
 type Init = { type: 'init'; canvas: OffscreenCanvas };
@@ -18,7 +19,7 @@ let cssWidth = 0;
 let cssHeight = 0;
 let pixelRatio = 1;
 
-const worker = self as DedicatedWorkerGlobalScope;
+const worker = self as unknown as DedicatedWorkerGlobalScope;
 worker.onmessage = (event: MessageEvent<Message>) => {
   const data = event.data;
   if (data.type === 'init') {
